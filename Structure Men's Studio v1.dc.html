@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Structure Men's Studio — Barbería de precisión · West Brickell, Miami</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body, #root { background: #0C0C0C; }
+    body { font-family: 'Manrope', Inter, sans-serif; color: #EDE9E0; }
+    a { color: #D7E2EA; text-decoration: none; transition: color .3s ease; }
+    a:hover { color: #C9A24A; }
+    ::selection { background: #C9A24A; color: #0C0C0C; }
+    @keyframes grain { 0%,100% { transform: translate(0,0);} 25% { transform: translate(-2%,1%);} 50% { transform: translate(1%,-2%);} 75% { transform: translate(-1%,2%);} }
+  </style>
+</helmet>
+
+<div style="background:#0C0C0C; color:#EDE9E0; overflow-x:clip; position:relative; min-height:100vh;">
+
+  <!-- film grain -->
+  <div style="position:fixed; inset:-5%; width:110%; height:110%; pointer-events:none; z-index:90; opacity:.05; mix-blend-mode:overlay; background-image:url('data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;filter id=&quot;n&quot;&gt;&lt;feTurbulence type=&quot;fractalNoise&quot; baseFrequency=&quot;0.9&quot; numOctaves=&quot;2&quot;/&gt;&lt;/filter&gt;&lt;rect width=&quot;200&quot; height=&quot;200&quot; filter=&quot;url(%23n)&quot;/&gt;&lt;/svg&gt;'); animation:grain 1.2s steps(4) infinite;"></div>
+
+  <!-- 1 · NAVBAR -->
+  <nav data-screen-label="Navbar" data-fade="0" style="position:sticky; top:16px; z-index:80; display:flex; align-items:center; justify-content:space-between; gap:24px; max-width:1180px; margin:16px auto 0; padding:10px 14px 10px 18px; border:1px solid rgba(215,226,234,.12); border-radius:999px; background:rgba(12,12,12,.72); backdrop-filter:blur(14px);">
+    <a href="#hero" style="display:flex; align-items:center; gap:12px;">
+      <img src="assets/logo.png" alt="Structure Men's Studio" style="width:40px; height:40px; object-fit:contain;">
+      <span style="font-family:'Cinzel',serif; font-weight:700; font-size:15px; letter-spacing:.14em; background:linear-gradient(180deg,#9AA3AD 0%,#EAF0F4 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">STRUCTURE</span>
+    </a>
+    <div style="display:flex; align-items:center; gap:28px; font-size:12px; font-weight:600; letter-spacing:.18em; text-transform:uppercase;">
+      <a href="#servicios" style="color:#D7E2EA;" style-hover="color:#C9A24A;">Servicios</a>
+      <a href="#metodo" style="color:#D7E2EA;" style-hover="color:#C9A24A;">Método</a>
+      <a href="#galeria" style="color:#D7E2EA;" style-hover="color:#C9A24A;">Galería</a>
+      <a href="#resenas" style="color:#D7E2EA;" style-hover="color:#C9A24A;">Reseñas</a>
+    </div>
+    <a href="{{ booksyUrl }}" target="_blank" rel="noopener" style="display:inline-block; padding:12px 26px; border-radius:999px; background:linear-gradient(100deg,#D9B25A,#A87B2E); color:#0C0C0C; font-size:12px; font-weight:700; letter-spacing:.22em; text-transform:uppercase;" style-hover="color:#0C0C0C; filter:brightness(1.12);">Reservar</a>
+  </nav>
+
+  <!-- 2 · HERO -->
+  <header id="hero" data-screen-label="Hero" style="min-height:100vh; display:grid; grid-template-columns:1.25fr .75fr; align-items:center; gap:40px; max-width:1180px; margin:0 auto; padding:80px 24px 60px;">
+    <div style="display:flex; flex-direction:column; gap:28px;">
+      <div data-fade="1" style="display:flex; align-items:center; gap:10px; font-size:12px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#8A8578;">
+        <span style="color:#C9A24A; font-size:9px;">●</span>
+        <span>West Brickell · Miami · Solo con cita</span>
+      </div>
+      <h1 data-fade="2" style="font-family:'Cinzel',serif; font-weight:900; text-transform:uppercase; line-height:.98; font-size:clamp(44px, 7.2vw, 108px); letter-spacing:.01em; background:linear-gradient(180deg,#9AA3AD 0%,#EAF0F4 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; text-wrap:balance;">Corte con asesoría. No con prisa.</h1>
+      <p data-fade="3" style="max-width:520px; color:#8A8578; font-size:17px; line-height:1.65; font-weight:400;">Barbería de precisión. Analizamos tu rostro y tu cabello, definimos el estilo que te queda y lo ejecutamos a la perfección.</p>
+      <div data-fade="4" style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+        <a href="{{ booksyUrl }}" target="_blank" rel="noopener" style="display:inline-block; padding:17px 40px; border-radius:999px; background:linear-gradient(100deg,#D9B25A,#A87B2E); color:#0C0C0C; font-size:13px; font-weight:700; letter-spacing:.24em; text-transform:uppercase;" style-hover="color:#0C0C0C; filter:brightness(1.12);">Reservar</a>
+        <a href="#servicios" style="display:inline-block; padding:16px 36px; border-radius:999px; border:1px solid rgba(215,226,234,.25); color:#D7E2EA; font-size:13px; font-weight:600; letter-spacing:.24em; text-transform:uppercase;" style-hover="border:1px solid #C9A24A; color:#C9A24A;">Ver servicios</a>
+      </div>
+    </div>
+    <div data-fade="5" style="display:flex; justify-content:center;">
+      <img ref="{{ magnetRef }}" src="assets/logo.png" alt="Emblema Structure" style="width:min(360px,80%); filter:drop-shadow(0 30px 60px rgba(0,0,0,.6)); will-change:transform; transition:transform .6s ease-in-out;">
+    </div>
+  </header>
+
+  <!-- 3 · MARQUEE -->
+  <section data-screen-label="Marquee" ref="{{ marqueeSection }}" style="padding:40px 0 60px; overflow:hidden; display:flex; flex-direction:column; gap:20px;">
+    <div ref="{{ marqueeRow1 }}" style="display:flex; gap:20px; will-change:transform; margin-left:-200px;">
+      <img src="assets/photo-1.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-3.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-5.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-7.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-2.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+    </div>
+    <div ref="{{ marqueeRow2 }}" style="display:flex; gap:20px; will-change:transform; margin-left:-600px;">
+      <img src="assets/photo-4.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-6.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-2.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-5.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-1.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+    </div>
+  </section>
+
+  <!-- 4 · TRUST BAR -->
+  <section data-screen-label="Trust bar" data-fade="6" style="border-top:1px solid rgba(215,226,234,.1); border-bottom:1px solid rgba(215,226,234,.1); padding:22px 24px;">
+    <div style="max-width:1180px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#8A8578;">
+      <span><span style="color:#C9A24A;">5.0★</span> · 68 reseñas</span>
+      <span>Solo con cita</span>
+      <span>West Brickell — 1110 SW 2nd Ave, Suite 4</span>
+      <span style="color:#D7E2EA;">All-scissors / trabajo a tijera</span>
+    </div>
+  </section>
+
+  <!-- 5 · SERVICIOS -->
+  <section id="servicios" data-screen-label="Servicios" style="background:#ECE7DC; color:#0C0C0C; border-radius:40px 40px 0 0; margin-top:70px; padding:100px 24px 90px;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <p data-fade="7" style="font-size:12px; font-weight:700; letter-spacing:.24em; text-transform:uppercase; color:#A87B2E;">Servicios</p>
+      <h2 data-fade="8" style="font-family:'Cinzel',serif; font-weight:800; font-size:clamp(34px,4.4vw,60px); text-transform:uppercase; margin:14px 0 50px;">Precisión, sin atajos</h2>
+      <div style="display:flex; flex-direction:column;">
+        <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
+          <div data-fade="{{ svc.fade }}" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(12,12,12,.16);">
+            <span style="font-family:'Cinzel',serif; font-weight:700; font-size:44px; color:rgba(12,12,12,.28);">{{ svc.num }}</span>
+            <div>
+              <h3 style="font-family:'Cinzel',serif; font-weight:700; font-size:24px; letter-spacing:.02em;">{{ svc.name }}</h3>
+              <p style="color:#55524A; font-size:14px; margin-top:6px; line-height:1.5;">{{ svc.desc }}</p>
+            </div>
+            <span style="font-weight:700; font-size:22px; color:#A87B2E; white-space:nowrap;">{{ svc.price }}</span>
+            <a href="{{ booksyUrl }}" target="_blank" rel="noopener" style="font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#0C0C0C; white-space:nowrap;" style-hover="color:#A87B2E;">Reservar →</a>
+          </div>
+        </sc-for>
+      </div>
+      <p data-fade="13" style="margin-top:34px; font-size:14px; color:#55524A;">Primera visita guiada con <strong style="color:#A87B2E;">50% off</strong> (código <strong>firstvisit</strong>).</p>
+    </div>
+  </section>
+
+  <!-- 6 · EL MÉTODO -->
+  <section id="metodo" data-screen-label="El Método" style="padding:130px 24px 110px;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <p data-fade="14" style="font-size:12px; font-weight:700; letter-spacing:.24em; text-transform:uppercase; color:#8A8578;">El método Structure</p>
+      <p ref="{{ animatedTextRef }}" style="font-family:'Cinzel',serif; font-weight:600; font-size:clamp(26px,3.4vw,44px); line-height:1.35; margin:26px 0 70px; max-width:980px; color:#EDE9E0;">Analizamos tu rostro y tu cabello, definimos el estilo que de verdad te queda, lo ejecutamos con precisión y te enseñamos a mantenerlo. Menos decisiones, mejor tomadas.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:32px;">
+        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+          <div data-fade="{{ st.fade }}" style="border-top:1px solid rgba(215,226,234,.14); padding-top:20px;">
+            <span style="font-family:'Cinzel',serif; font-weight:700; font-size:15px; color:#C9A24A; letter-spacing:.1em;">{{ st.num }}</span>
+            <h3 style="font-family:'Cinzel',serif; font-weight:700; font-size:22px; margin:10px 0 8px; background:linear-gradient(180deg,#9AA3AD 0%,#EAF0F4 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">{{ st.name }}</h3>
+            <p style="color:#8A8578; font-size:14px; line-height:1.55;">{{ st.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · GALERÍA -->
+  <section id="galeria" data-screen-label="Galería" style="padding:40px 24px 120px;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <h2 data-fade="19" style="font-family:'Cinzel',serif; font-weight:800; font-size:clamp(34px,4.4vw,60px); text-transform:uppercase; margin-bottom:60px; background:linear-gradient(180deg,#9AA3AD 0%,#EAF0F4 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">El trabajo</h2>
+      <sc-for list="{{ galleryCards }}" as="card" hint-placeholder-count="3">
+        <div style="position:sticky; top:{{ card.top }}; margin-bottom:60px;">
+          <div data-sticky-card="{{ $index }}" style="background:#141414; border:1px solid rgba(201,162,74,.25); border-radius:24px; padding:28px; will-change:transform; transform-origin:center top;">
+            <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px;">
+              <h3 style="font-family:'Cinzel',serif; font-weight:700; font-size:22px; letter-spacing:.04em; color:#EDE9E0;">{{ card.title }}</h3>
+              <span style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#8A8578;">{{ card.tag }}</span>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; height:520px;">
+              <div style="display:grid; grid-template-rows:1fr 1fr; gap:16px;">
+                <img src="{{ card.imgA }}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+                <img src="{{ card.imgB }}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+              </div>
+              <img src="{{ card.imgC }}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 8 · RESEÑAS -->
+  <section id="resenas" data-screen-label="Reseñas" style="padding:20px 24px 120px;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <h2 data-fade="20" style="font-family:'Cinzel',serif; font-weight:800; font-size:clamp(34px,4.4vw,60px); text-transform:uppercase; margin-bottom:56px; background:linear-gradient(180deg,#9AA3AD 0%,#EAF0F4 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Lo que dicen</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px;">
+        <sc-for list="{{ reviews }}" as="rev" hint-placeholder-count="3">
+          <div data-fade="{{ rev.fade }}" style="background:#141414; border:1px solid rgba(215,226,234,.1); border-radius:20px; padding:34px 30px; display:flex; flex-direction:column; gap:18px;">
+            <span style="font-family:'Cinzel',serif; font-size:56px; line-height:.6; color:#C9A24A;">“</span>
+            <p style="color:#D7E2EA; font-size:15px; line-height:1.65; flex:1;">{{ rev.text }}</p>
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-weight:700; font-size:14px; color:#EDE9E0;">{{ rev.name }}</span>
+              <span style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#8A8578; border:1px solid rgba(215,226,234,.15); border-radius:999px; padding:5px 12px;">5.0★ · Google</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · RESERVAR / CONTACTO -->
+  <section id="reservar" data-screen-label="Reservar" style="padding:20px 24px 120px;">
+    <div data-fade="24" style="max-width:1080px; margin:0 auto; background:#141414; border:1px solid rgba(201,162,74,.3); border-radius:28px; padding:clamp(40px,6vw,80px); text-align:center; display:flex; flex-direction:column; align-items:center; gap:24px;">
+      <h2 style="font-family:'Cinzel',serif; font-weight:800; font-size:clamp(32px,4.4vw,56px); text-transform:uppercase; background:linear-gradient(180deg,#9AA3AD 0%,#EAF0F4 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Aparta tu turno</h2>
+      <p style="color:#8A8578; font-size:16px; max-width:460px; line-height:1.6;">Solo con cita. Reserva en Booksy y llega a tu hora — el resto lo hacemos nosotros.</p>
+      <a href="{{ booksyUrl }}" target="_blank" rel="noopener" style="display:inline-block; padding:18px 52px; border-radius:999px; background:linear-gradient(100deg,#D9B25A,#A87B2E); color:#0C0C0C; font-size:14px; font-weight:700; letter-spacing:.24em; text-transform:uppercase;" style-hover="color:#0C0C0C; filter:brightness(1.12);">Reservar en Booksy</a>
+      <p style="font-size:14px; color:#8A8578;">¿Prefieres escribir? <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="color:#C9A24A; font-weight:600;" style-hover="color:#EAF0F4;">WhatsApp</a></p>
+    </div>
+  </section>
+
+  <!-- 10 · SOBRE -->
+  <section data-screen-label="Sobre" style="padding:20px 24px 120px;">
+    <div style="max-width:1080px; margin:0 auto; display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:start;">
+      <div data-fade="25">
+        <p style="font-size:12px; font-weight:700; letter-spacing:.24em; text-transform:uppercase; color:#8A8578;">Sobre Structure</p>
+        <h2 style="font-family:'Cinzel',serif; font-weight:800; font-size:clamp(30px,3.6vw,48px); text-transform:uppercase; margin:14px 0 22px; background:linear-gradient(180deg,#9AA3AD 0%,#EAF0F4 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">La barbería que te guía</h2>
+        <p style="color:#8A8578; font-size:16px; line-height:1.7; max-width:480px;">Structure nace de una idea simple: un buen corte empieza antes de la tijera. Aquí no adivinamos — analizamos, definimos y ejecutamos. Orden, precisión y calma, en el corazón de West Brickell.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <sc-for list="{{ infoBoxes }}" as="box" hint-placeholder-count="3">
+          <div data-fade="{{ box.fade }}" style="background:#141414; border:1px solid rgba(215,226,234,.1); border-radius:16px; padding:24px 26px;">
+            <p style="font-size:11px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:#C9A24A; margin-bottom:8px;">{{ box.label }}</p>
+            <p style="color:#D7E2EA; font-size:15px; line-height:1.55;">{{ box.value }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 · FOOTER -->
+  <footer data-screen-label="Footer" style="border-top:1px solid rgba(215,226,234,.1); padding:70px 24px 40px;">
+    <div style="max-width:1080px; margin:0 auto; display:flex; flex-direction:column; gap:50px;">
+      <div style="display:flex; align-items:center; gap:16px;">
+        <img src="assets/logo.png" alt="" style="width:52px; height:52px; object-fit:contain;">
+        <span style="font-family:'Cinzel',serif; font-weight:800; font-size:clamp(22px,3vw,34px); letter-spacing:.1em; text-transform:uppercase; background:linear-gradient(180deg,#9AA3AD 0%,#EAF0F4 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Structure Men's Studio</span>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:40px 60px;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <span style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#55524A;">Navegar</span>
+          <a href="#servicios" style="font-family:'Cinzel',serif; font-size:20px; font-weight:600; color:#D7E2EA;" style-hover="color:#C9A24A;">Servicios</a>
+          <a href="#metodo" style="font-family:'Cinzel',serif; font-size:20px; font-weight:600; color:#D7E2EA;" style-hover="color:#C9A24A;">Método</a>
+          <a href="#reservar" style="font-family:'Cinzel',serif; font-size:20px; font-weight:600; color:#D7E2EA;" style-hover="color:#C9A24A;">Reservar</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <span style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#55524A;">Visítanos</span>
+          <p style="color:#8A8578; font-size:14px; line-height:1.6;">1110 SW 2nd Ave, Suite 4<br>Miami, FL 33130 — West Brickell</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <span style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#55524A;">Síguenos</span>
+          <a href="https://instagram.com/barberabriss" target="_blank" rel="noopener" style="font-family:'Cinzel',serif; font-size:20px; font-weight:600; color:#D7E2EA;" style-hover="color:#C9A24A;">@barberabriss</a>
+        </div>
+      </div>
+      <p style="font-size:12px; color:#55524A; letter-spacing:.08em;">Sitio por The303 Creative LLC · © 2026 Structure Men's Studio</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;booksyUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://booksy.com&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Reservas&quot; },
+  &quot;whatsapp&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;13050000000&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Reservas&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const booksyUrl = this.props.booksyUrl ?? 'https://booksy.com';
+    const wa = this.props.whatsapp ?? '13050000000';
+    return {
+      booksyUrl,
+      whatsappUrl: 'https://wa.me/' + wa,
+      magnetRef: (el) => { this._magnet = el; },
+      marqueeSection: (el) => { this._mSection = el; },
+      marqueeRow1: (el) => { this._mRow1 = el; },
+      marqueeRow2: (el) => { this._mRow2 = el; },
+      animatedTextRef: (el) => { this._animText = el; },
+      services: [
+        { num: '01', name: 'Classic Cut', desc: 'Corte clásico con asesoría', price: '$50', fade: 9 },
+        { num: '02', name: 'Skin Fade', desc: 'Degradado a piel, definición limpia', price: '$55', fade: 10 },
+        { num: '03', name: 'All-Scissors Cut', desc: 'Trabajo 100% a tijera', price: '$60', fade: 11 },
+        { num: '04', name: 'Line up & extras', desc: 'Perfilado, detalles y complementos', price: 'desde $10', fade: 12 },
+      ],
+      steps: [
+        { num: '01', name: 'Analiza', desc: 'Estudiamos tu rostro, tu cabello y tu rutina.', fade: 15 },
+        { num: '02', name: 'Define', desc: 'Elegimos juntos el estilo que de verdad te queda.', fade: 16 },
+        { num: '03', name: 'Ejecuta', desc: 'Precisión total, sin prisa y sin atajos.', fade: 17 },
+        { num: '04', name: 'Mantén', desc: 'Te enseñamos a mantenerlo día a día.', fade: 18 },
+      ],
+      galleryCards: [
+        { title: 'Precisión a tijera', tag: 'All-scissors', top: '96px', imgA: 'assets/photo-1.jpg', imgB: 'assets/photo-2.jpg', imgC: 'assets/photo-3.jpg' },
+        { title: 'Definición y línea', tag: 'Detalle', top: '124px', imgA: 'assets/photo-4.jpg', imgB: 'assets/photo-5.jpg', imgC: 'assets/photo-6.jpg' },
+        { title: 'El resultado', tag: 'Estilo', top: '152px', imgA: 'assets/photo-7.jpg', imgB: 'assets/photo-3.jpg', imgC: 'assets/photo-4.jpg' },
+      ],
+      reviews: [
+        { text: '[Pega aquí una reseña real de Google Business — reseña 1]', name: 'Nombre', fade: 21 },
+        { text: '[Pega aquí una reseña real de Google Business — reseña 2]', name: 'Nombre', fade: 22 },
+        { text: '[Pega aquí una reseña real de Google Business — reseña 3]', name: 'Nombre', fade: 23 },
+      ],
+      infoBoxes: [
+        { label: 'Ubicación', value: '1110 SW 2nd Ave, Suite 4, Miami FL 33130 (West Brickell)', fade: 26 },
+        { label: 'Horario', value: '[Por confirmar]', fade: 27 },
+        { label: 'Contacto', value: 'Instagram @barberabriss · WhatsApp [por confirmar]', fade: 28 },
+      ],
+    };
+  }
+
+  componentDidMount() {
+    this._setupFadeIn();
+    this._setupScroll();
+    this._setupMagnet();
+    this._setupAnimatedText();
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._fadeFallback) window.removeEventListener('scroll', this._fadeFallback);
+    if (this._io) this._io.disconnect();
+    if (this._magnetCleanup) this._magnetCleanup();
+  }
+
+  _setupFadeIn() {
+    const els = Array.from(document.querySelectorAll('[data-fade]'));
+    const reveal = (el) => {
+      if (el._revealed) return;
+      el._revealed = true;
+      const delay = (parseInt(el.getAttribute('data-fade'), 10) % 5) * 0.12;
+      el.style.transitionDelay = delay + 's';
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+      if (this._io) this._io.unobserve(el);
+    };
+    const vh = window.innerHeight;
+    els.forEach((el) => {
+      el.style.transition = 'opacity .7s cubic-bezier(.25,.1,.25,1), transform .7s cubic-bezier(.25,.1,.25,1)';
+      const rect = el.getBoundingClientRect();
+      if (rect.top < vh + 50 && rect.bottom > -50) {
+        // already in view: animate in from hidden on next frame
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        requestAnimationFrame(() => requestAnimationFrame(() => reveal(el)));
+      } else {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+      }
+    });
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => { if (entry.isIntersecting) reveal(entry.target); });
+    }, { rootMargin: '50px' });
+    els.forEach((el) => { if (!el._revealed) this._io.observe(el); });
+    // safety net: never leave content hidden if IO doesn't fire
+    setTimeout(() => {
+      els.forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (!el._revealed && r.top < window.innerHeight && r.bottom > 0) reveal(el);
+      });
+    }, 800);
+    // also reveal on scroll as fallback
+    this._fadeFallback = () => {
+      els.forEach((el) => {
+        if (el._revealed) return;
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight + 50 && r.bottom > -50) reveal(el);
+      });
+    };
+    window.addEventListener('scroll', this._fadeFallback, { passive: true });
+  }
+
+  _setupScroll() {
+    const cards = Array.from(document.querySelectorAll('[data-sticky-card]'));
+    const tick = () => {
+      const y = window.scrollY;
+      // marquee
+      if (this._mSection && this._mRow1 && this._mRow2) {
+        const top = this._mSection.offsetTop;
+        const off = (y - top + window.innerHeight) * 0.3;
+        this._mRow1.style.transform = 'translateX(' + (off * 0.5 - 200) + 'px)';
+        this._mRow2.style.transform = 'translateX(' + (-off * 0.5 + 200) + 'px)';
+      }
+      // sticky stack scale
+      const total = cards.length;
+      cards.forEach((card, i) => {
+        const wrap = card.parentElement;
+        const rect = wrap.getBoundingClientRect();
+        const stuckAt = 96 + i * 28;
+        const progress = Math.min(Math.max((stuckAt + 40 - rect.top) / 400, 0), 1);
+        const targetScale = 1 - (total - 1 - i) * 0.03;
+        const scale = 1 - (1 - targetScale) * progress;
+        card.style.transform = 'scale(' + scale + ')';
+      });
+      // animated text
+      if (this._chars) {
+        const rect = this._animText.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const start = vh * 0.8, end = vh * 0.2;
+        const p = Math.min(Math.max((start - rect.top) / (start - end + rect.height), 0), 1);
+        const n = this._chars.length;
+        this._chars.forEach((span, i) => {
+          const t = Math.min(Math.max(p * n * 1.15 - i, 0), 1);
+          span.style.opacity = String(0.2 + 0.8 * t);
+        });
+      }
+    };
+    this._onScroll = () => requestAnimationFrame(tick);
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    tick();
+  }
+
+  _setupMagnet() {
+    const el = this._magnet;
+    if (!el) return;
+    const padding = 150, strength = 3;
+    const onMove = (e) => {
+      const r = el.getBoundingClientRect();
+      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      const dx = e.clientX - cx, dy = e.clientY - cy;
+      if (Math.abs(dx) < r.width / 2 + padding && Math.abs(dy) < r.height / 2 + padding) {
+        el.style.transition = 'transform 0.3s ease-out';
+        el.style.transform = 'translate3d(' + (dx / strength) + 'px,' + (dy / strength) + 'px,0)';
+      } else {
+        el.style.transition = 'transform 0.6s ease-in-out';
+        el.style.transform = 'translate3d(0,0,0)';
+      }
+    };
+    window.addEventListener('mousemove', onMove, { passive: true });
+    this._magnetCleanup = () => window.removeEventListener('mousemove', onMove);
+  }
+
+  _setupAnimatedText() {
+    const p = this._animText;
+    if (!p || p.querySelector('span')) return;
+    const text = p.textContent;
+    p.textContent = '';
+    this._chars = text.split('').map((ch) => {
+      const s = document.createElement('span');
+      s.textContent = ch;
+      s.style.opacity = '0.2';
+      p.appendChild(s);
+      return s;
+    });
+  }
+}
+</script>
+</body>
+</html>

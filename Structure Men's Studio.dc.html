@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Structure Men's Studio — Barbería de precisión · West Brickell, Miami</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'Melodrame'; src: url('assets/fonts/melodrame.ttf') format('truetype'); font-display: swap; }
+    @font-face { font-family: 'Bebas'; src: url('assets/fonts/bebas.ttf') format('truetype'); font-display: swap; }
+    @font-face { font-family: 'ArialNarrow7'; src: url('assets/fonts/arial-narrow.ttf') format('truetype'); font-display: swap; }
+    @font-face { font-family: 'Otflag'; src: url('assets/fonts/otflag.otf') format('opentype'); font-display: swap; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body, #root { background: #161316; }
+    body { font-family: 'Manrope', Inter, sans-serif; color: #FFFFFF; }
+    a { color: #BABABA; text-decoration: none; transition: color .3s ease; }
+    a:hover { color: #FF6D29; }
+    ::selection { background: #FF6D29; color: #161316; }
+    @keyframes grain { 0%,100% { transform: translate(0,0);} 25% { transform: translate(-2%,1%);} 50% { transform: translate(1%,-2%);} 75% { transform: translate(-1%,2%);} }
+    @keyframes chatPulse { 0% { box-shadow: 0 0 0 0 rgba(255,109,41,.45);} 70% { box-shadow: 0 0 0 18px rgba(255,109,41,0);} 100% { box-shadow: 0 0 0 0 rgba(255,109,41,0);} }
+  </style>
+</helmet>
+
+<div style="background:#161316; color:#FFFFFF; overflow-x:clip; position:relative; min-height:100vh;">
+
+  <!-- film grain -->
+  <div style="position:fixed; inset:-5%; width:110%; height:110%; pointer-events:none; z-index:90; opacity:.05; mix-blend-mode:overlay; background-image:url('data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;filter id=&quot;n&quot;&gt;&lt;feTurbulence type=&quot;fractalNoise&quot; baseFrequency=&quot;0.9&quot; numOctaves=&quot;2&quot;/&gt;&lt;/filter&gt;&lt;rect width=&quot;200&quot; height=&quot;200&quot; filter=&quot;url(%23n)&quot;/&gt;&lt;/svg&gt;'); animation:grain 1.2s steps(4) infinite;"></div>
+
+  <!-- floating chat button -->
+  <div style="position:fixed; right:28px; bottom:28px; z-index:95; display:flex; align-items:center; gap:14px;">
+    <span style="background:rgba(69,48,39,.85); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,.14); color:#FFFFFF; font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; padding:10px 18px; border-radius:999px;">¿Hablamos?</span>
+    <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" aria-label="Abrir chat" style="width:62px; height:62px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#FF8A4D 0%,#FF6D29 45%,#B84A12 100%); border:1px solid rgba(255,255,255,.35); box-shadow:0 12px 32px rgba(255,109,41,.35); animation:chatPulse 2.6s ease-out infinite;" style-hover="filter:brightness(1.1); color:#FFFFFF;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.35 8.5 8.5 0 0 1-3.4-.7L3 21l1.85-5.6A8.38 8.38 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5z"></path></svg>
+    </a>
+  </div>
+
+  <!-- 1 · NAVBAR -->
+  <nav data-screen-label="Navbar" data-fade="0" style="position:sticky; top:16px; z-index:80; display:flex; align-items:center; justify-content:space-between; gap:24px; max-width:1180px; margin:16px auto 0; padding:10px 14px 10px 18px; border:1px solid rgba(255,255,255,.1); border-radius:999px; background:rgba(22,19,22,.72); backdrop-filter:blur(14px);">
+    <a href="#hero" style="display:flex; align-items:center; gap:12px;">
+      <img src="assets/logo.png" alt="Structure Men's Studio" style="width:42px; height:42px; object-fit:contain;">
+      <span style="font-family:'Bebas',sans-serif; font-size:19px; letter-spacing:.24em; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">STRUCTURE</span>
+    </a>
+    <div style="display:flex; align-items:center; gap:28px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.22em;">
+      <a href="#servicios" style="color:#BABABA;" style-hover="color:#FF6D29;">Servicios</a>
+      <a href="#metodo" style="color:#BABABA;" style-hover="color:#FF6D29;">Método</a>
+      <a href="#galeria" style="color:#BABABA;" style-hover="color:#FF6D29;">Galería</a>
+      <a href="#resenas" style="color:#BABABA;" style-hover="color:#FF6D29;">Reseñas</a>
+      <a href="Blog.dc.html" style="color:#BABABA;" style-hover="color:#FF6D29;">Blog</a>
+      <a href="Merch.dc.html" style="color:#BABABA;" style-hover="color:#FF6D29;">Merch</a>
+    </div>
+    <a href="{{ booksyUrl }}" target="_blank" rel="noopener" style="display:inline-block; padding:12px 26px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em;" style-hover="color:#161316; filter:brightness(1.1);">Reservar</a>
+  </nav>
+
+  <!-- 2 · HERO -->
+  <header id="hero" data-screen-label="Hero" style="position:relative; min-height:92vh; display:grid; grid-template-columns:1.25fr .75fr; align-items:center; gap:40px; max-width:1180px; margin:0 auto; padding:70px 24px 30px;">
+    <div style="position:absolute; top:-10%; right:-20%; width:70%; height:90%; pointer-events:none; background:radial-gradient(ellipse at center, rgba(255,109,41,.16) 0%, rgba(69,48,39,.12) 45%, transparent 70%); filter:blur(40px);"></div>
+    <div style="display:flex; flex-direction:column; gap:26px; position:relative;">
+      <div data-fade="1" style="display:flex; align-items:center; gap:12px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.3em; color:#BABABA;">
+        <span style="color:#FF6D29; font-size:9px;">●</span>
+        <span>West Brickell · Miami · Solo con cita</span>
+      </div>
+      <h1 data-fade="2" style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; line-height:1.06; font-size:clamp(46px, 6vw, 94px); letter-spacing:-.015em; text-wrap:balance;">
+        <span style="display:block; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 85%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Corte con asesoría.</span>
+        <span style="display:block; background:linear-gradient(100deg,#FF8A4D 0%,#FF6D29 55%,#C24E14 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">No con prisa.</span>
+      </h1>
+      <p data-fade="3" style="max-width:500px; color:#BABABA; font-size:16px; line-height:1.7; font-weight:300;">Barbería de precisión. Analizamos tu rostro y tu cabello, definimos el estilo que te queda y lo ejecutamos a la perfección.</p>
+      <div data-fade="4" style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+        <a href="{{ booksyUrl }}" target="_blank" rel="noopener" style="display:inline-block; padding:17px 42px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:16px; letter-spacing:.26em;" style-hover="color:#161316; filter:brightness(1.1);">Reservar</a>
+        <a href="#servicios" style="display:inline-block; padding:16px 38px; border-radius:999px; border:1px solid rgba(255,255,255,.22); color:#FFFFFF; font-family:'Bebas',sans-serif; font-size:16px; letter-spacing:.26em;" style-hover="border:1px solid #FF6D29; color:#FF6D29;">Ver servicios</a>
+      </div>
+    </div>
+    <div data-fade="5" style="display:flex; justify-content:center; position:relative;">
+      <img ref="{{ magnetRef }}" src="assets/logo.png" alt="Emblema Structure" style="width:min(380px,85%); filter:drop-shadow(0 30px 60px rgba(0,0,0,.65)); will-change:transform; transition:transform .6s ease-in-out;">
+    </div>
+  </header>
+
+  <!-- 3 · MARQUEE (una sola fila) -->
+  <section data-screen-label="Marquee" ref="{{ marqueeSection }}" style="padding:10px 0 70px; overflow:hidden;">
+    <div ref="{{ marqueeRow1 }}" style="display:flex; gap:20px; will-change:transform;">
+      <img src="assets/photo-1.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-3.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-5.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-7.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-2.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-4.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-6.jpg" alt="" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+    </div>
+  </section>
+
+  <!-- 4 · TRUST BAR -->
+  <section data-screen-label="Trust bar" data-fade="6" style="border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.08); padding:22px 24px; background:linear-gradient(100deg, rgba(69,48,39,.35), rgba(22,19,22,0) 60%);">
+    <div style="max-width:1180px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.18em; color:#BABABA;">
+      <span><span style="color:#FF6D29;">5.0★</span> · 68 reseñas</span>
+      <span>Solo con cita</span>
+      <span>West Brickell — 1110 SW 2nd Ave, Suite 4</span>
+      <span style="color:#FFFFFF;">All-scissors / trabajo a tijera</span>
+    </div>
+  </section>
+
+  <!-- 5 · SERVICIOS -->
+  <section id="servicios" data-screen-label="Servicios" style="background:linear-gradient(180deg,#FFFFFF 0%,#EFEAE4 100%); color:#161316; border-radius:40px 40px 0 0; margin-top:70px; padding:100px 24px 90px;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <p data-fade="7" style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.3em; color:#C24E14;">Servicios</p>
+      <h2 data-fade="8" style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(36px,4.4vw,60px); margin:12px 0 50px;">Precisión, sin atajos</h2>
+      <div style="display:flex; flex-direction:column;">
+        <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
+          <div data-fade="{{ svc.fade }}" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(22,19,22,.14);">
+            <span style="font-family:'Bebas',sans-serif; font-size:48px; color:rgba(22,19,22,.22);">{{ svc.num }}</span>
+            <div>
+              <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:23px;">{{ svc.name }}</h3>
+              <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">{{ svc.desc }}</p>
+            </div>
+            <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">{{ svc.price }}</span>
+            <a href="{{ booksyUrl }}" target="_blank" rel="noopener" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;" style-hover="color:#FF6D29;">Reservar →</a>
+          </div>
+        </sc-for>
+      </div>
+      <p data-fade="13" style="margin-top:34px; font-size:14px; color:#453027;">Primera visita guiada con <strong style="color:#C24E14;">50% off</strong> (código <strong>firstvisit</strong>).</p>
+    </div>
+  </section>
+
+  <!-- 6 · EL MÉTODO -->
+  <section id="metodo" data-screen-label="El Método" style="padding:130px 24px 110px; background:radial-gradient(ellipse 80% 60% at 20% 0%, rgba(69,48,39,.4) 0%, transparent 60%);">
+    <div style="max-width:1080px; margin:0 auto;">
+      <p data-fade="14" style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.3em; color:#FF6D29;">El método Structure</p>
+      <p ref="{{ animatedTextRef }}" style="font-family:'Melodrame',serif; font-weight:400; font-size:clamp(28px,3.4vw,46px); line-height:1.35; margin:26px 0 70px; max-width:980px; color:#FFFFFF;">Analizamos tu rostro y tu cabello, definimos el estilo que de verdad te queda, lo ejecutamos con precisión y te enseñamos a mantenerlo. Menos decisiones, mejor tomadas.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:32px;">
+        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+          <div data-fade="{{ st.fade }}" style="border-top:1px solid rgba(255,255,255,.14); padding-top:20px;">
+            <span style="font-family:'Bebas',sans-serif; font-size:17px; color:#FF6D29; letter-spacing:.14em;">{{ st.num }}</span>
+            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; margin:10px 0 8px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">{{ st.name }}</h3>
+            <p style="color:#BABABA; font-size:14px; line-height:1.55; font-weight:300;">{{ st.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6.5 · BARBEROS (game stats) -->
+  <section id="barberos" data-screen-label="Barberos" style="padding:40px 24px 120px; position:relative; z-index:1;">
+    <div style="max-width:1120px; margin:0 auto;">
+      <p data-fade="30" style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.3em; color:#FF6D29;">El equipo</p>
+      <h2 data-fade="31" style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(36px,4.4vw,60px); margin:12px 0 14px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Elige a tu barbero</h2>
+      <p data-fade="32" style="color:#BABABA; font-size:15px; font-weight:300; margin-bottom:50px; max-width:480px; line-height:1.6;">Cada uno con su especialidad. Revisa sus stats y reserva con quien va contigo.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; align-items:stretch;">
+        <sc-for list="{{ barbers }}" as="bb" hint-placeholder-count="3">
+          <div data-fade="{{ bb.fade }}" style="display:flex; flex-direction:column; background:linear-gradient(160deg,#221C1A 0%,#161316 75%); border:1px solid {{ bb.borderColor }}; border-radius:24px; overflow:hidden; transition:transform .35s ease, box-shadow .35s ease;" style-hover="transform:translateY(-8px); box-shadow:0 24px 50px rgba(255,109,41,.18);">
+            <div style="position:relative; height:320px; background:#1D1815;">
+              <img src="{{ bb.photo }}" alt="{{ bb.name }}" loading="lazy" style="width:100%; height:100%; object-fit:{{ bb.fit }}; object-position:center 20%; padding:{{ bb.pad }};">
+              <span style="position:absolute; top:16px; left:16px; font-family:'Bebas',sans-serif; font-size:15px; letter-spacing:.16em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:7px 16px;">{{ bb.level }}</span>
+              <span style="position:absolute; top:16px; right:16px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#FFFFFF; background:rgba(22,19,22,.7); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:7px 14px;">{{ bb.classTag }}</span>
+              <div style="position:absolute; inset:auto 0 0 0; height:120px; background:linear-gradient(180deg, transparent, rgba(22,19,22,.95)); display:flex; align-items:flex-end; padding:18px;">
+                <div>
+                  <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:28px; color:#FFFFFF;">{{ bb.name }}</h3>
+                  <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.24em; color:#BABABA; margin-top:4px;">{{ bb.role }}</p>
+                </div>
+              </div>
+            </div>
+            <div style="padding:24px 24px 20px; display:flex; flex-direction:column; gap:14px; flex:1;">
+              <sc-for list="{{ bb.stats }}" as="st" hint-placeholder-count="5">
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                  <div style="display:flex; align-items:baseline; justify-content:space-between;">
+                    <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">{{ st.label }}</span>
+                    <span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">{{ st.value }}</span>
+                  </div>
+                  <div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;">
+                    <div data-statbar="{{ st.value }}" style="height:100%; width:{{ st.width }}; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div>
+                  </div>
+                </div>
+              </sc-for>
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:auto; padding-top:16px; border-top:1px solid rgba(255,255,255,.09);">
+                <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.18em; color:#8A7A6E;">{{ bb.special }}</span>
+                <a href="{{ bb.ctaHref }}" target="_blank" rel="noopener" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.2em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:10px 22px; white-space:nowrap;" style-hover="color:#161316; filter:brightness(1.1);">{{ bb.cta }}</a>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · GALERÍA -->
+  <section id="galeria" data-screen-label="Galería" style="padding:40px 24px 120px; position:relative; z-index:1;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <h2 data-fade="19" style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(36px,4.4vw,60px); margin-bottom:60px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">El trabajo</h2>
+      <sc-for list="{{ galleryCards }}" as="card" hint-placeholder-count="3">
+        <div style="position:sticky; top:{{ card.top }}; margin-bottom:60px;">
+          <div data-sticky-card="{{ $index }}" style="background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; padding:28px; will-change:transform; transform-origin:center top;">
+            <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px;">
+              <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; color:#FFFFFF;">{{ card.title }}</h3>
+              <span style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em; color:#BABABA;">{{ card.tag }}</span>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; height:520px;">
+              <div style="display:grid; grid-template-rows:1fr 1fr; gap:16px;">
+                <img src="{{ card.imgA }}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+                <img src="{{ card.imgB }}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+              </div>
+              <img src="{{ card.imgC }}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 8 · RESEÑAS -->
+  <section id="resenas" data-screen-label="Reseñas" style="padding:110px 24px 120px; position:relative; z-index:2; background:#161316;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <h2 data-fade="20" style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(36px,4.4vw,60px); margin-bottom:56px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Lo que dicen</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px;">
+        <sc-for list="{{ reviews }}" as="rev" hint-placeholder-count="3">
+          <div data-fade="{{ rev.fade }}" style="background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:20px; padding:34px 30px; display:flex; flex-direction:column; gap:18px;">
+            <span style="font-family:'Melodrame',serif; font-size:56px; line-height:.6; color:#FF6D29;">“</span>
+            <p style="color:#BABABA; font-size:15px; line-height:1.65; flex:1;">{{ rev.text }}</p>
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-weight:700; font-size:14px; color:#FFFFFF;">{{ rev.name }}</span>
+              <span style="font-family:'Bebas',sans-serif; font-size:12px; letter-spacing:.2em; color:#BABABA; border:1px solid rgba(255,255,255,.15); border-radius:999px; padding:5px 12px;">5.0★ · Google</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · RESERVAR / CONTACTO -->
+  <section id="reservar" data-screen-label="Reservar" style="padding:20px 24px 120px; position:relative; z-index:2; background:#161316;">
+    <div data-fade="24" style="max-width:1080px; margin:0 auto; background:linear-gradient(135deg, rgba(69,48,39,.9) 0%, #161316 60%), radial-gradient(ellipse at 80% 20%, rgba(255,109,41,.25), transparent 60%); border:1px solid rgba(255,109,41,.35); border-radius:28px; padding:clamp(40px,6vw,80px); text-align:center; display:flex; flex-direction:column; align-items:center; gap:24px;">
+      <h2 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(34px,4.4vw,56px); background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Aparta tu turno</h2>
+      <p style="color:#BABABA; font-size:16px; max-width:460px; line-height:1.6; font-weight:300;">Solo con cita. Reserva en Booksy y llega a tu hora — el resto lo hacemos nosotros.</p>
+      <a href="{{ booksyUrl }}" target="_blank" rel="noopener" style="display:inline-block; padding:18px 54px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:17px; letter-spacing:.26em;" style-hover="color:#161316; filter:brightness(1.1);">Reservar cita</a>
+      <p style="font-size:14px; color:#BABABA;">¿Prefieres escribir? <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="color:#FF6D29; font-weight:600;" style-hover="color:#FFFFFF;">WhatsApp</a></p>
+    </div>
+  </section>
+
+  <!-- 10 · SOBRE -->
+  <section data-screen-label="Sobre" style="padding:20px 24px 120px; position:relative; z-index:2; background:#161316;">
+    <div style="max-width:1080px; margin:0 auto; display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:start;">
+      <div data-fade="25">
+        <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.3em; color:#FF6D29;">Sobre Structure</p>
+        <h2 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(30px,3.6vw,48px); margin:14px 0 22px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">La barbería que te guía</h2>
+        <p style="color:#BABABA; font-size:16px; line-height:1.7; max-width:480px; font-weight:300;">Structure nace de una idea simple: un buen corte empieza antes de la tijera. Aquí no adivinamos — analizamos, definimos y ejecutamos. Orden, precisión y calma, en el corazón de West Brickell.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <sc-for list="{{ infoBoxes }}" as="box" hint-placeholder-count="3">
+          <div data-fade="{{ box.fade }}" style="background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:24px 26px;">
+            <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.26em; color:#FF6D29; margin-bottom:8px;">{{ box.label }}</p>
+            <p style="color:#FFFFFF; font-size:15px; line-height:1.55;">{{ box.value }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div data-fade="29" style="max-width:1080px; margin:70px auto 0; border:1px solid rgba(255,255,255,.12); border-radius:24px; overflow:hidden;">
+      <iframe src="https://www.google.com/maps?q=1110+SW+2nd+Ave+Suite+4,+Miami,+FL+33130&amp;output=embed" width="100%" height="420" style="border:0; display:block; filter:grayscale(1) invert(.92) contrast(.9);" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Mapa — Structure Men's Studio"></iframe>
+    </div>
+  </section>
+
+  <!-- 11 · FOOTER -->
+  <footer data-screen-label="Footer" style="border-top:1px solid rgba(255,255,255,.08); padding:70px 24px 40px; position:relative; z-index:2; background:linear-gradient(180deg,#161316 0%,#1D1613 100%);">
+    <div style="max-width:1080px; margin:0 auto; display:flex; flex-direction:column; gap:50px;">
+      <div style="display:flex; align-items:center; gap:16px;">
+        <img src="assets/logo.png" alt="" style="width:56px; height:56px; object-fit:contain;">
+        <span style="font-family:'Melodrame',serif; font-weight:400; font-size:clamp(24px,3vw,36px); background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Structure Men's Studio</span>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:40px 60px;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.26em; color:#8A7A6E;">Navegar</span>
+          <a href="#servicios" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;" style-hover="color:#FF6D29;">Servicios</a>
+          <a href="#metodo" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;" style-hover="color:#FF6D29;">Método</a>
+          <a href="#reservar" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;" style-hover="color:#FF6D29;">Reservar</a>
+          <a href="Blog.dc.html" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;" style-hover="color:#FF6D29;">Blog</a>
+          <a href="Merch.dc.html" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;" style-hover="color:#FF6D29;">Merch</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.26em; color:#8A7A6E;">Visítanos</span>
+          <p style="color:#BABABA; font-size:14px; line-height:1.6;">1110 SW 2nd Ave, Suite 4<br>Miami, FL 33130 — West Brickell</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.26em; color:#8A7A6E;">Síguenos</span>
+          <a href="https://instagram.com/barberabriss" target="_blank" rel="noopener" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;" style-hover="color:#FF6D29;">@barberabriss</a>
+        </div>
+      </div>
+      <p style="font-size:12px; color:#8A7A6E; letter-spacing:.08em;">Sitio por The303 Creative LLC · © 2026 Structure Men's Studio</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;booksyUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://getsquire.com/booking/book/structure-mens-studio-brickell&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Reservas&quot; },
+  &quot;whatsapp&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;13050000000&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Reservas&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const booksyUrl = this.props.booksyUrl ?? 'https://getsquire.com/booking/book/structure-mens-studio-brickell';
+    const wa = this.props.whatsapp ?? '13050000000';
+    return {
+      booksyUrl,
+      whatsappUrl: 'https://wa.me/' + wa,
+      magnetRef: (el) => { this._magnet = el; },
+      marqueeSection: (el) => { this._mSection = el; },
+      marqueeRow1: (el) => { this._mRow1 = el; },
+      animatedTextRef: (el) => { this._animText = el; },
+      services: [
+        { num: '01', name: 'Classic Cut', desc: 'Corte clásico con asesoría', price: '$50', fade: 9 },
+        { num: '02', name: 'Skin Fade', desc: 'Degradado a piel, definición limpia', price: '$55', fade: 10 },
+        { num: '03', name: 'All-Scissors Cut', desc: 'Trabajo 100% a tijera', price: '$60', fade: 11 },
+        { num: '04', name: 'Line up & extras', desc: 'Perfilado, detalles y complementos', price: 'desde $10', fade: 12 },
+      ],
+      steps: [
+        { num: '01', name: 'Analiza', desc: 'Estudiamos tu rostro, tu cabello y tu rutina.', fade: 15 },
+        { num: '02', name: 'Define', desc: 'Elegimos juntos el estilo que de verdad te queda.', fade: 16 },
+        { num: '03', name: 'Ejecuta', desc: 'Precisión total, sin prisa y sin atajos.', fade: 17 },
+        { num: '04', name: 'Mantén', desc: 'Te enseñamos a mantenerlo día a día.', fade: 18 },
+      ],
+      galleryCards: [
+        { title: 'Precisión a tijera', tag: 'All-scissors', top: '96px', imgA: 'assets/photo-1.jpg', imgB: 'assets/photo-2.jpg', imgC: 'assets/photo-3.jpg' },
+        { title: 'Definición y línea', tag: 'Detalle', top: '124px', imgA: 'assets/photo-4.jpg', imgB: 'assets/photo-5.jpg', imgC: 'assets/photo-6.jpg' },
+        { title: 'El resultado', tag: 'Estilo', top: '152px', imgA: 'assets/photo-7.jpg', imgB: 'assets/photo-3.jpg', imgC: 'assets/photo-4.jpg' },
+      ],
+      reviews: [
+        { text: '[Pega aquí una reseña real de Google Business — reseña 1]', name: 'Nombre', fade: 21 },
+        { text: '[Pega aquí una reseña real de Google Business — reseña 2]', name: 'Nombre', fade: 22 },
+        { text: '[Pega aquí una reseña real de Google Business — reseña 3]', name: 'Nombre', fade: 23 },
+      ],
+      barbers: [
+        {
+          fade: 33, name: 'Alex', role: 'Barbero · Fade specialist', level: 'LVL 8',
+          classTag: 'Clase: Fade Master', photo: 'assets/barber-alex.jpg', fit: 'cover', pad: '0',
+          borderColor: 'rgba(255,255,255,.14)', special: 'Ulti: Skin fade espejo',
+          cta: 'Reservar', ctaHref: this.props.booksyUrl ?? 'https://getsquire.com/booking/book/structure-mens-studio-brickell',
+          stats: [
+            { label: 'Fades', value: 95, width: '95%' },
+            { label: 'Tijera', value: 90, width: '90%' },
+            { label: 'Line up', value: 94, width: '94%' },
+            { label: 'Rapidez', value: 88, width: '88%' },
+            { label: 'Estilo', value: 92, width: '92%' },
+          ],
+        },
+        {
+          fade: 34, name: 'Bri', role: 'Founder · Master barber', level: 'LVL 10',
+          classTag: 'Clase: Precision Master', photo: 'assets/barber-bri.jpg', fit: 'cover', pad: '0',
+          borderColor: 'rgba(255,109,41,.45)', special: 'Ulti: Asesoría de rostro',
+          cta: 'Reservar', ctaHref: this.props.booksyUrl ?? 'https://getsquire.com/booking/book/structure-mens-studio-brickell',
+          stats: [
+            { label: 'Tijera', value: 98, width: '98%' },
+            { label: 'Asesoría', value: 96, width: '96%' },
+            { label: 'Detalle', value: 95, width: '95%' },
+            { label: 'Fades', value: 92, width: '92%' },
+            { label: 'Educación', value: 94, width: '94%' },
+          ],
+        },
+        {
+          fade: 35, name: '¿Tú?', role: 'Próximo miembro del equipo', level: 'LVL ?',
+          classTag: 'Slot abierto', photo: 'assets/logo.png', fit: 'contain', pad: '40px',
+          borderColor: 'rgba(255,255,255,.14)', special: 'Se busca: talento con tijera',
+          cta: 'Aplicar', ctaHref: 'https://wa.me/' + (this.props.whatsapp ?? '13050000000'),
+          stats: [
+            { label: 'Tijera', value: '?', width: '30%' },
+            { label: 'Fades', value: '?', width: '45%' },
+            { label: 'Line up', value: '?', width: '38%' },
+            { label: 'Actitud', value: 100, width: '100%' },
+            { label: 'Hambre de crecer', value: 100, width: '100%' },
+          ],
+        },
+      ],
+      infoBoxes: [
+        { label: 'Ubicación', value: '1110 SW 2nd Ave, Suite 4, Miami FL 33130 (West Brickell)', fade: 26 },
+        { label: 'Horario', value: '[Por confirmar]', fade: 27 },
+        { label: 'Contacto', value: 'Instagram @barberabriss · WhatsApp [por confirmar]', fade: 28 },
+      ],
+    };
+  }
+
+  componentDidMount() {
+    this._setupFadeIn();
+    this._setupScroll();
+    this._setupMagnet();
+    this._setupAnimatedText();
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._fadeFallback) window.removeEventListener('scroll', this._fadeFallback);
+    if (this._fadeInterval) clearInterval(this._fadeInterval);
+    if (this._statInterval) clearInterval(this._statInterval);
+    if (this._magnetCleanup) this._magnetCleanup();
+  }
+
+  _setupFadeIn() {
+    if (this._fadeSetupDone) return;
+    this._fadeSetupDone = true;
+    // WAAPI-only fade system: no inline opacity/transition is EVER written,
+    // so no stuck CSS transition can hold an element at opacity 0.
+    this._revealedIds = this._revealedIds || new Set();
+    const revealed = this._revealedIds;
+    const play = (el) => {
+      const id = el.getAttribute('data-fade');
+      if (revealed.has(id)) return;
+      revealed.add(id);
+      // cancel any pinned/stray animations before playing ours
+      if (el.getAnimations) el.getAnimations().forEach((a) => a.cancel());
+      const delay = (parseInt(id, 10) % 5) * 120;
+      const anim = el.animate(
+        [{ opacity: 0, transform: 'translateY(30px)' }, { opacity: 1, transform: 'none' }],
+        { duration: 700, delay, easing: 'cubic-bezier(.25,.1,.25,1)', fill: 'backwards' }
+      );
+      // force-complete by wall clock: if the frame timeline is frozen (screenshot
+      // contexts), finish() jumps to the final state so nothing stays at opacity 0
+      setTimeout(() => { try { anim.finish(); } catch (e) {} }, delay + 750);
+    };
+    const sweep = () => {
+      document.querySelectorAll('[data-fade]').forEach((el) => {
+        if (revealed.has(el.getAttribute('data-fade'))) return;
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight + 50 && r.bottom > -50) play(el);
+      });
+    };
+    this._fadeFallback = sweep;
+    window.addEventListener('scroll', sweep, { passive: true });
+    this._fadeInterval = setInterval(sweep, 400);
+    sweep();
+    // stat bars: static width is the final value; animate a grow-in once when visible
+    this._statsDone = this._statsDone || new Set();
+    const statSweep = () => {
+      document.querySelectorAll('[data-statbar]').forEach((el, i) => {
+        const key = i + ':' + el.getAttribute('data-statbar');
+        if (this._statsDone.has(key)) return;
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight - 40 && r.bottom > 0) {
+          this._statsDone.add(key);
+          if (el.getAnimations) el.getAnimations().forEach((a) => a.cancel());
+          const anim = el.animate(
+            [{ width: '0%' }, { width: getComputedStyle(el).width }],
+            { duration: 900, delay: (i % 5) * 90, easing: 'cubic-bezier(.25,.1,.25,1)' }
+          );
+          setTimeout(() => { try { anim.finish(); } catch (e) {} }, (i % 5) * 90 + 950);
+        }
+      });
+    };
+    window.addEventListener('scroll', statSweep, { passive: true });
+    this._statInterval = setInterval(statSweep, 400);
+    statSweep();
+  }
+
+  _setupScroll() {
+    const cards = Array.from(document.querySelectorAll('[data-sticky-card]'));
+    const tick = () => {
+      const y = window.scrollY;
+      if (this._mSection && this._mRow1) {
+        const top = this._mSection.offsetTop;
+        const off = (y - top + window.innerHeight) * 0.3;
+        this._mRow1.style.transform = 'translateX(' + (-off * 0.6) + 'px)';
+      }
+      const total = cards.length;
+      cards.forEach((card, i) => {
+        const wrap = card.parentElement;
+        const rect = wrap.getBoundingClientRect();
+        const stuckAt = 96 + i * 28;
+        const progress = Math.min(Math.max((stuckAt + 40 - rect.top) / 400, 0), 1);
+        const targetScale = 1 - (total - 1 - i) * 0.03;
+        const scale = 1 - (1 - targetScale) * progress;
+        card.style.transform = 'scale(' + scale + ')';
+      });
+      if (this._chars) {
+        const rect = this._animText.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const start = vh * 0.8, end = vh * 0.2;
+        const p = Math.min(Math.max((start - rect.top) / (start - end + rect.height), 0), 1);
+        const n = this._chars.length;
+        this._chars.forEach((span, i) => {
+          const t = Math.min(Math.max(p * n * 1.15 - i, 0), 1);
+          span.style.opacity = String(0.2 + 0.8 * t);
+        });
+      }
+    };
+    this._onScroll = () => requestAnimationFrame(tick);
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    tick();
+  }
+
+  _setupMagnet() {
+    const el = this._magnet;
+    if (!el) return;
+    const padding = 150, strength = 3;
+    const onMove = (e) => {
+      const r = el.getBoundingClientRect();
+      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      const dx = e.clientX - cx, dy = e.clientY - cy;
+      if (Math.abs(dx) < r.width / 2 + padding && Math.abs(dy) < r.height / 2 + padding) {
+        el.style.transition = 'transform 0.3s ease-out';
+        el.style.transform = 'translate3d(' + (dx / strength) + 'px,' + (dy / strength) + 'px,0)';
+      } else {
+        el.style.transition = 'transform 0.6s ease-in-out';
+        el.style.transform = 'translate3d(0,0,0)';
+      }
+    };
+    window.addEventListener('mousemove', onMove, { passive: true });
+    this._magnetCleanup = () => window.removeEventListener('mousemove', onMove);
+  }
+
+  _setupAnimatedText() {
+    const p = this._animText;
+    if (!p || p.querySelector('span')) return;
+    const text = p.textContent;
+    p.textContent = '';
+    this._chars = text.split('').map((ch) => {
+      const s = document.createElement('span');
+      s.textContent = ch;
+      s.style.opacity = '0.2';
+      p.appendChild(s);
+      return s;
+    });
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Merch — Structure Men's Studio · West Brickell, Miami</title>
+  <link rel="icon" href="assets/logo.png">
+  <meta name="description" content="Playeras, sudaderas y suéteres de Structure Men's Studio. Merch oficial de la barbería de West Brickell, Miami.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'Melodrame'; src: url('assets/fonts/melodrame.ttf') format('truetype'); font-display: swap; }
+    @font-face { font-family: 'Bebas'; src: url('assets/fonts/bebas.ttf') format('truetype'); font-display: swap; }
+    @font-face { font-family: 'Otflag'; src: url('assets/fonts/otflag.otf') format('opentype'); font-display: swap; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body, #root { background: #161316; }
+    body { font-family: 'Manrope', Inter, sans-serif; color: #FFFFFF; }
+    a { color: #BABABA; text-decoration: none; transition: color .3s ease; }
+    a:hover { color: #FF6D29; }
+    ::selection { background: #FF6D29; color: #161316; }
+  </style>
+</helmet>
+
+<div style="background:#161316; color:#FFFFFF; overflow-x:clip; position:relative; min-height:100vh;">
+
+  <!-- NAVBAR -->
+  <nav data-screen-label="Navbar" style="position:sticky; top:16px; z-index:80; display:flex; align-items:center; justify-content:space-between; gap:24px; max-width:1180px; margin:16px auto 0; padding:10px 14px 10px 18px; border:1px solid rgba(255,255,255,.1); border-radius:999px; background:rgba(22,19,22,.72); backdrop-filter:blur(14px);">
+    <a href="Structure Men's Studio.dc.html" style="display:flex; align-items:center; gap:12px;">
+      <img src="assets/logo.png" alt="Structure Men's Studio" style="width:42px; height:42px; object-fit:contain;">
+      <span style="font-family:'Bebas',sans-serif; font-size:19px; letter-spacing:.24em; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">STRUCTURE</span>
+    </a>
+    <div style="display:flex; align-items:center; gap:28px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.22em;">
+      <a href="Structure Men's Studio.dc.html" style="color:#BABABA;" style-hover="color:#FF6D29;">Inicio</a>
+      <a href="Structure Men's Studio.dc.html#servicios" style="color:#BABABA;" style-hover="color:#FF6D29;">Servicios</a>
+      <a href="Blog.dc.html" style="color:#BABABA;" style-hover="color:#FF6D29;">Blog</a>
+      <span style="color:#FF6D29;">Merch</span>
+    </div>
+    <a href="{{ booksyUrl }}" target="_blank" rel="noopener" style="display:inline-block; padding:12px 26px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em;" style-hover="color:#161316; filter:brightness(1.1);">Reservar</a>
+  </nav>
+
+  <!-- HEADER -->
+  <header data-screen-label="Merch header" style="position:relative; max-width:1080px; margin:0 auto; padding:110px 24px 60px;">
+    <div style="position:absolute; top:-20%; right:-10%; width:60%; height:120%; pointer-events:none; background:radial-gradient(ellipse at center, rgba(255,109,41,.14) 0%, rgba(69,48,39,.1) 45%, transparent 70%); filter:blur(40px);"></div>
+    <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.3em; color:#FF6D29; position:relative;">Merch oficial</p>
+    <h1 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(42px,5.6vw,82px); line-height:1.06; letter-spacing:-.015em; margin:16px 0 20px; position:relative; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 85%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; text-wrap:balance;">Llévate el estudio <span style="font-family:'Melodrame',serif; background:linear-gradient(100deg,#FF8A4D 0%,#FF6D29 55%,#C24E14 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">contigo</span></h1>
+    <p style="color:#BABABA; font-size:16px; line-height:1.7; max-width:520px; font-weight:300; position:relative;">Playeras, sudaderas y suéteres con el sello Structure. Pedidos por WhatsApp o en el estudio — envíos en Miami.</p>
+  </header>
+
+  <!-- PRODUCT GRID -->
+  <section data-screen-label="Productos" style="max-width:1080px; margin:0 auto; padding:0 24px 90px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:24px;">
+      <sc-for list="{{ products }}" as="prod" hint-placeholder-count="6">
+        <div style="display:flex; flex-direction:column; background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:20px; overflow:hidden;">
+          <div style="width:100%; height:300px; background:#1D1815;">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{ prod.slotId }}" shape="rect" placeholder="{{ prod.placeholder }}" hint-size="100%,300px"></x-import>
+          </div>
+          <div style="padding:24px 24px 28px; display:flex; flex-direction:column; gap:10px; flex:1;">
+            <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.24em; color:#FF6D29;">{{ prod.tag }}</span>
+            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:21px;">{{ prod.name }}</h3>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:auto; padding-top:8px;">
+              <span style="font-family:'Bebas',sans-serif; font-size:24px; color:#FF6D29;">{{ prod.price }}</span>
+              <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.2em; color:#FFFFFF; border:1px solid rgba(255,255,255,.22); border-radius:999px; padding:10px 18px;" style-hover="border:1px solid #FF6D29; color:#FF6D29;">Pedir →</a>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- COMING SOON -->
+  <section data-screen-label="Próximamente" style="padding:0 24px 110px;">
+    <div style="max-width:1080px; margin:0 auto; background:linear-gradient(135deg, rgba(69,48,39,.9) 0%, #161316 60%), radial-gradient(ellipse at 80% 20%, rgba(255,109,41,.25), transparent 60%); border:1px solid rgba(255,109,41,.35); border-radius:28px; padding:clamp(40px,6vw,70px); display:flex; flex-direction:column; align-items:flex-start; gap:16px;">
+      <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.3em; color:#FF6D29;">Próximamente</p>
+      <h2 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(28px,3.6vw,44px); background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Productos de barbería</h2>
+      <p style="color:#BABABA; font-size:16px; line-height:1.7; max-width:520px; font-weight:300;">Los productos que usamos en la silla — pomadas, ceras y cuidado del cabello — llegarán pronto a la tienda. Escríbenos para enterarte primero.</p>
+      <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="display:inline-block; margin-top:8px; padding:15px 40px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:15px; letter-spacing:.26em;" style-hover="color:#161316; filter:brightness(1.1);">Avísame</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer data-screen-label="Footer" style="border-top:1px solid rgba(255,255,255,.08); padding:60px 24px 40px; background:linear-gradient(180deg,#161316 0%,#1D1613 100%);">
+    <div style="max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <img src="assets/logo.png" alt="" style="width:44px; height:44px; object-fit:contain;">
+        <span style="font-family:'Melodrame',serif; font-size:22px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Structure Men's Studio</span>
+      </div>
+      <p style="font-size:12px; color:#8A7A6E; letter-spacing:.08em;">Sitio por The303 Creative LLC · © 2026 Structure Men's Studio</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;booksyUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://booksy.com&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;whatsapp&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;13050000000&quot;, &quot;tsType&quot;: &quot;string&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const wa = this.props.whatsapp ?? '13050000000';
+    return {
+      booksyUrl: this.props.booksyUrl ?? 'https://booksy.com',
+      whatsappUrl: 'https://wa.me/' + wa,
+      products: [
+        { slotId: 'merch-playera-logo', tag: 'Playera', name: 'Playera Temple — negra', price: '$35', placeholder: 'Foto: playera negra con logo' },
+        { slotId: 'merch-playera-script', tag: 'Playera', name: 'Playera Structure — crema', price: '$35', placeholder: 'Foto: playera crema' },
+        { slotId: 'merch-sudadera-hoodie', tag: 'Sudadera', name: 'Hoodie Structure — negro', price: '$60', placeholder: 'Foto: hoodie negro' },
+        { slotId: 'merch-sudadera-zip', tag: 'Sudadera', name: 'Hoodie West Brickell — marrón', price: '$65', placeholder: 'Foto: hoodie marrón' },
+        { slotId: 'merch-sueter-crew', tag: 'Suéter', name: 'Crewneck Temple — gris', price: '$55', placeholder: 'Foto: crewneck gris' },
+        { slotId: 'merch-gorra', tag: 'Accesorio', name: 'Gorra Structure — negra', price: '$28', placeholder: 'Foto: gorra negra' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
