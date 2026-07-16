@@ -223,7 +223,7 @@ img{max-width:100%;height:auto;}
   <section id="resenas" data-screen-label="Reseñas" style="padding:110px 24px 120px; position:relative; z-index:2; background:#161316;">
     <div style="max-width:1080px; margin:0 auto;">
       <h2 data-fade="20" style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(36px,4.4vw,60px); margin-bottom:56px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Lo que dicen</h2>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px;">
         <sc-for list="{{ reviews }}" as="rev" hint-placeholder-count="3">
           <div data-fade="{{ rev.fade }}" style="background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:20px; padding:34px 30px; display:flex; flex-direction:column; gap:18px;">
             <span style="font-family:'Melodrame',serif; font-size:56px; line-height:.6; color:#FF6D29;">“</span>
@@ -364,20 +364,7 @@ class Component extends DCLogic {
             { label: 'Fades', value: 92, width: '92%' },
             { label: 'Educación', value: 94, width: '94%' },
           ],
-        },
-        {
-          fade: 35, name: '¿Tú?', role: 'Próximo miembro del equipo', level: 'LVL ?',
-          classTag: 'Slot abierto', photo: 'assets/logo.png', fit: 'contain', pad: '40px',
-          borderColor: 'rgba(255,255,255,.14)', special: 'Se busca: talento con tijera',
-          cta: 'Aplicar', ctaHref: 'https://wa.me/' + (this.props.whatsapp ?? '13050000000'),
-          stats: [
-            { label: 'Tijera', value: '?', width: '30%' },
-            { label: 'Fades', value: '?', width: '45%' },
-            { label: 'Line up', value: '?', width: '38%' },
-            { label: 'Actitud', value: 100, width: '100%' },
-            { label: 'Hambre de crecer', value: 100, width: '100%' },
-          ],
-        },
+        }
       ],
       infoBoxes: [
         { label: 'Ubicación', value: '1110 SW 2nd Ave, Suite 4, Miami FL 33130 (West Brickell)', fade: 26 },
