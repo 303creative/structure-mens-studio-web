@@ -6,6 +6,7 @@
 <title>Structure Men's Studio — Barbería de precisión · West Brickell, Miami</title>
 <meta name="description" content="Barbería de precisión en West Brickell, Miami. Corte con asesoría de rostro, skin fades y trabajo 100% a tijera. Solo con cita.">
 <link rel="icon" href="assets/logo.png">
+<link rel="canonical" href="https://structuremensstudio.com/">
 <meta property="og:type" content="business.business">
 <meta property="og:title" content="Structure Men's Studio — Barbería de precisión · West Brickell">
 <meta property="og:description" content="Analizamos tu rostro, definimos tu estilo y lo ejecutamos a la perfección. Solo con cita en West Brickell, Miami.">
@@ -15,6 +16,9 @@
 <meta name="twitter:title" content="Structure Men's Studio — Barbería de precisión · West Brickell">
 <meta name="twitter:description" content="Corte con asesoría, skin fades y trabajo a tijera. Solo con cita.">
 <meta name="twitter:image" content="https://structuremensstudio.com/assets/photo-1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -22,7 +26,6 @@
   "name": "Structure Men's Studio",
   "image": "https://structuremensstudio.com/assets/photo-1.jpg",
   "url": "https://structuremensstudio.com/",
-  "telephone": "",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
@@ -37,83 +40,70 @@
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "68" }
 }
 </script>
-<script src="./support.js" defer></script>
+<style>
+  @font-face { font-family: 'Melodrame'; src: url('assets/fonts/melodrame.ttf') format('truetype'); font-display: swap; }
+  @font-face { font-family: 'Bebas'; src: url('assets/fonts/bebas.ttf') format('truetype'); font-display: swap; }
+  @font-face { font-family: 'ArialNarrow7'; src: url('assets/fonts/arial-narrow.ttf') format('truetype'); font-display: swap; }
+  @font-face { font-family: 'Otflag'; src: url('assets/fonts/otflag.otf') format('opentype'); font-display: swap; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body, #root { background: #161316; }
+  body { font-family: 'Manrope', Inter, sans-serif; color: #FFFFFF; }
+  a { color: #BABABA; text-decoration: none; transition: color .3s ease; }
+  a:hover { color: #FF6D29; }
+  ::selection { background: #FF6D29; color: #161316; }
+  html { scroll-behavior: smooth; }
+  img { max-width: 100%; height: auto; display: block; }
+  section, header, footer { contain: layout paint; }
+  * { min-width: 0; }
+  html, body { overflow-x: hidden; }
+  @keyframes grain { 0%,100% { transform: translate(0,0);} 25% { transform: translate(-2%,1%);} 50% { transform: translate(1%,-2%);} 75% { transform: translate(-1%,2%);} }
+  @keyframes marquee { from { transform: translateX(0);} to { transform: translateX(-50%);} }
+  .marquee-track { display: flex; gap: 20px; width: max-content; animation: marquee 45s linear infinite; }
+  /* Reveal on scroll (progressive enhancement: solo se oculta si hay JS) */
+  .js [data-fade] { opacity: 0; transform: translateY(30px); transition: opacity .7s cubic-bezier(.25,.1,.25,1), transform .7s cubic-bezier(.25,.1,.25,1); }
+  .js [data-fade].in { opacity: 1; transform: none; }
+  .js [data-statbar] { transition: width .9s cubic-bezier(.25,.1,.25,1); }
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } .js [data-fade] { opacity: 1; transform: none; transition: none; } }
+  /* Hover polish (reemplaza style-hover de Claude Design) */
+  .btn-primary:hover { filter: brightness(1.1); }
+  .lnk:hover { color: #FF6D29 !important; }
+  @media(max-width:820px){
+    nav{gap:10px !important; padding:8px 12px !important; flex-wrap:nowrap !important;}
+    nav > div{gap:14px !important; font-size:10px !important; letter-spacing:.04em !important;}
+    nav a{font-size:10px !important;}
+    nav > a:last-child{padding:9px 15px !important; font-size:11px !important;}
+    nav img{width:32px !important; height:auto !important;}
+    section[data-screen-label="Sobre"] > div:first-child{grid-template-columns:1fr !important; gap:32px !important;}
+    #servicios [style*="grid-template-columns:110px"]{grid-template-columns:56px 1fr !important; row-gap:8px !important; column-gap:14px !important;}
+    #servicios [style*="grid-template-columns:110px"] > span:first-child{font-size:30px !important;}
+    #servicios [style*="grid-template-columns:110px"] > span:nth-child(3),
+    #servicios [style*="grid-template-columns:110px"] > a{grid-column:2 !important; justify-self:start !important;}
+    #galeria [style*="height:340px"]{grid-template-columns:1fr !important; height:auto !important;}
+    .marquee-track img{width:300px !important; height:200px !important;}
+  }
+</style>
+<script>document.documentElement.className += ' js';</script>
 </head>
 <body>
-<x-dc>
-<helmet>
-  <title>Structure Men's Studio — Barbería de precisión · West Brickell, Miami</title>
-  <link rel="icon" href="assets/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    @font-face { font-family: 'Melodrame'; src: url('assets/fonts/melodrame.ttf') format('truetype'); font-display: swap; }
-    @font-face { font-family: 'Bebas'; src: url('assets/fonts/bebas.ttf') format('truetype'); font-display: swap; }
-    @font-face { font-family: 'ArialNarrow7'; src: url('assets/fonts/arial-narrow.ttf') format('truetype'); font-display: swap; }
-    @font-face { font-family: 'Otflag'; src: url('assets/fonts/otflag.otf') format('opentype'); font-display: swap; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body, #root { background: #161316; }
-    body { font-family: 'Manrope', Inter, sans-serif; color: #FFFFFF; }
-    a { color: #BABABA; text-decoration: none; transition: color .3s ease; }
-    a:hover { color: #FF6D29; }
-    ::selection { background: #FF6D29; color: #161316; }
-    @keyframes grain { 0%,100% { transform: translate(0,0);} 25% { transform: translate(-2%,1%);} 50% { transform: translate(1%,-2%);} 75% { transform: translate(-1%,2%);} }
-    @keyframes chatPulse { 0% { box-shadow: 0 0 0 0 rgba(255,109,41,.45);} 70% { box-shadow: 0 0 0 18px rgba(255,109,41,0);} 100% { box-shadow: 0 0 0 0 rgba(255,109,41,0);} }
-  </style>
-<style id="the303-fix">
-html,body{overflow-x:hidden !important;}
-img{max-width:100%;height:auto;}
-/* ocultar chat WhatsApp original: usamos la recepcionista IA */
-[style*="position:fixed; right:28px; bottom:28px"]{display:none !important;}
-@media(max-width:820px){
-  nav{gap:10px !important; padding:8px 12px !important; flex-wrap:nowrap !important;}
-  nav > div{gap:14px !important; font-size:10px !important; letter-spacing:.04em !important;}
-  nav a{font-size:10px !important;}
-  nav > a:last-child{padding:9px 15px !important; font-size:11px !important;}
-  nav img{width:32px !important; height:auto !important;}
-  /* Sobre: 2 columnas -> 1 en móvil */
-  section[data-screen-label="Sobre"] > div:first-child{grid-template-columns:1fr !important; gap:32px !important;}
-  /* Servicios: fila de 4 columnas -> compacta */
-  #servicios [style*="grid-template-columns:110px"]{grid-template-columns:56px 1fr !important; row-gap:8px !important; column-gap:14px !important;}
-  #servicios [style*="grid-template-columns:110px"] > span:first-child{font-size:30px !important;}
-  #servicios [style*="grid-template-columns:110px"] > span:nth-child(3),
-  #servicios [style*="grid-template-columns:110px"] > a{grid-column:2 !important; justify-self:start !important;}
-  /* Galería: 2 columnas con alto fijo -> 1 columna fluida */
-  #galeria [style*="height:340px"]{grid-template-columns:1fr !important; height:auto !important;}
-}
-</style>
-<style id="the303-space">
-section,header,footer{contain:layout paint;}
-img{max-width:100%;height:auto;display:block;}
-*{min-width:0;}
-html{scroll-behavior:smooth;}
-</style>
-</helmet>
 
 <div style="background:#161316; color:#FFFFFF; overflow-x:clip; position:relative; min-height:100vh;">
 
   <!-- film grain -->
   <div style="position:fixed; inset:-5%; width:110%; height:110%; pointer-events:none; z-index:90; opacity:.05; mix-blend-mode:overlay; background-image:url('data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;filter id=&quot;n&quot;&gt;&lt;feTurbulence type=&quot;fractalNoise&quot; baseFrequency=&quot;0.9&quot; numOctaves=&quot;2&quot;/&gt;&lt;/filter&gt;&lt;rect width=&quot;200&quot; height=&quot;200&quot; filter=&quot;url(%23n)&quot;/&gt;&lt;/svg&gt;'); animation:grain 1.2s steps(4) infinite;"></div>
 
-  <!-- floating chat button -->
-  
-
   <!-- 1 · NAVBAR -->
-  <nav data-screen-label="Navbar" data-fade="0" style="position:sticky; top:16px; z-index:80; display:flex; align-items:center; justify-content:space-between; gap:24px; max-width:1180px; margin:16px auto 0; padding:10px 14px 10px 18px; border:1px solid rgba(255,255,255,.1); border-radius:999px; background:rgba(22,19,22,.72); backdrop-filter:blur(14px);">
+  <nav data-screen-label="Navbar" style="position:sticky; top:16px; z-index:80; display:flex; align-items:center; justify-content:space-between; gap:24px; max-width:1180px; margin:16px auto 0; padding:10px 14px 10px 18px; border:1px solid rgba(255,255,255,.1); border-radius:999px; background:rgba(22,19,22,.72); backdrop-filter:blur(14px);">
     <a href="#hero" style="display:flex; align-items:center; gap:12px;">
-      <img src="assets/logo.png" alt="Structure Men's Studio" style="width:42px; height:42px; object-fit:contain;">
+      <img src="assets/logo.png" alt="Structure Men's Studio" width="42" height="42" style="width:42px; height:42px; object-fit:contain;">
       <span style="font-family:'Bebas',sans-serif; font-size:19px; letter-spacing:.24em; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">STRUCTURE</span>
     </a>
     <div style="display:flex; align-items:center; gap:28px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.22em;">
-      <a href="#servicios" style="color:#BABABA;" style-hover="color:#FF6D29;">Servicios</a>
-      
-      
-      
-      <a href="Blog.dc.html" style="color:#BABABA;" style-hover="color:#FF6D29;">Blog</a>
-      
+      <a href="#servicios" class="lnk" style="color:#BABABA;">Servicios</a>
+      <a href="#barberos" class="lnk" style="color:#BABABA;">Equipo</a>
+      <a href="#resenas" class="lnk" style="color:#BABABA;">Reseñas</a>
+      <a href="Blog.dc.html" class="lnk" style="color:#BABABA;">Blog</a>
     </div>
-    <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" style="display:inline-block; padding:12px 26px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em;" style-hover="color:#161316; filter:brightness(1.1);">Reservar</a>
+    <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="btn-primary" style="display:inline-block; padding:12px 26px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em;">Reservar</a>
   </nav>
 
   <!-- 2 · HERO -->
@@ -130,25 +120,32 @@ html{scroll-behavior:smooth;}
       </h1>
       <p data-fade="3" style="max-width:500px; color:#BABABA; font-size:16px; line-height:1.7; font-weight:300;">Barbería de precisión. Analizamos tu rostro y tu cabello, definimos el estilo que te queda y lo ejecutamos a la perfección.</p>
       <div data-fade="4" style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
-        <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" style="display:inline-block; padding:17px 42px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:16px; letter-spacing:.26em;" style-hover="color:#161316; filter:brightness(1.1);">Reservar</a>
-        <a href="#servicios" style="display:inline-block; padding:16px 38px; border-radius:999px; border:1px solid rgba(255,255,255,.22); color:#FFFFFF; font-family:'Bebas',sans-serif; font-size:16px; letter-spacing:.26em;" style-hover="border:1px solid #FF6D29; color:#FF6D29;">Ver servicios</a>
+        <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="btn-primary" style="display:inline-block; padding:17px 42px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:16px; letter-spacing:.26em;">Reservar</a>
+        <a href="#servicios" style="display:inline-block; padding:16px 38px; border-radius:999px; border:1px solid rgba(255,255,255,.22); color:#FFFFFF; font-family:'Bebas',sans-serif; font-size:16px; letter-spacing:.26em;">Ver servicios</a>
       </div>
     </div>
     <div data-fade="5" style="display:flex; justify-content:center; position:relative;">
-      <img ref="{{ magnetRef }}" src="assets/logo.png" alt="Emblema Structure" style="width:min(380px,85%); filter:drop-shadow(0 30px 60px rgba(0,0,0,.65)); will-change:transform; transition:transform .6s ease-in-out;">
+      <img id="hero-logo" src="assets/logo.png" alt="Emblema Structure Men's Studio" width="380" height="380" style="width:min(380px,85%); filter:drop-shadow(0 30px 60px rgba(0,0,0,.65)); will-change:transform; transition:transform .6s ease-in-out;">
     </div>
   </header>
 
-  <!-- 3 · MARQUEE (una sola fila) -->
-  <section data-screen-label="Marquee" ref="{{ marqueeSection }}" style="padding:10px 0 70px; overflow:hidden;">
-    <div ref="{{ marqueeRow1 }}" style="display:flex; gap:20px; will-change:transform;">
-      <img src="assets/photo-1.jpg" alt="Corte de precisión en Structure Men's Studio, West Brickell Miami" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
-      <img src="assets/photo-3.jpg" alt="Skin fade terminado en barbería Structure, Brickell" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
-      <img src="assets/photo-5.jpg" alt="Trabajo a tijera en Structure Men's Studio Miami" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
-      <img src="assets/photo-7.jpg" alt="Detalle y perfilado de barba en Structure, West Brickell" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
-      <img src="assets/photo-2.jpg" alt="Corte con asesoría de imagen en Structure Men's Studio" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
-      <img src="assets/photo-4.jpg" alt="Degradado a piel definido en barbería Structure Miami" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
-      <img src="assets/photo-6.jpg" alt="Resultado de corte masculino en Structure, Brickell" loading="lazy" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+  <!-- 3 · MARQUEE -->
+  <section data-screen-label="Marquee" style="padding:10px 0 70px; overflow:hidden;">
+    <div class="marquee-track">
+      <img src="assets/photo-1.jpg" alt="Corte de precisión en Structure Men's Studio, West Brickell Miami" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-3.jpg" alt="Skin fade terminado en barbería Structure, Brickell" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-5.jpg" alt="Trabajo a tijera en Structure Men's Studio Miami" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-7.jpg" alt="Detalle y perfilado de barba en Structure, West Brickell" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-2.jpg" alt="Corte con asesoría de imagen en Structure Men's Studio" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-4.jpg" alt="Degradado a piel definido en barbería Structure Miami" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-6.jpg" alt="Resultado de corte masculino en Structure, Brickell" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-1.jpg" alt="" aria-hidden="true" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-3.jpg" alt="" aria-hidden="true" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-5.jpg" alt="" aria-hidden="true" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-7.jpg" alt="" aria-hidden="true" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-2.jpg" alt="" aria-hidden="true" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-4.jpg" alt="" aria-hidden="true" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
+      <img src="assets/photo-6.jpg" alt="" aria-hidden="true" loading="lazy" width="420" height="270" style="width:420px; height:270px; object-fit:cover; border-radius:16px; flex-shrink:0;">
     </div>
   </section>
 
@@ -168,17 +165,51 @@ html{scroll-behavior:smooth;}
       <p data-fade="7" style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.3em; color:#C24E14;">Servicios</p>
       <h2 data-fade="8" style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(36px,4.4vw,60px); margin:12px 0 50px;">Precisión, sin atajos</h2>
       <div style="display:flex; flex-direction:column;">
-        <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
-          <div data-fade="{{ svc.fade }}" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(22,19,22,.14);">
-            <span style="font-family:'Bebas',sans-serif; font-size:48px; color:rgba(22,19,22,.22);">{{ svc.num }}</span>
-            <div>
-              <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:23px;">{{ svc.name }}</h3>
-              <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">{{ svc.desc }}</p>
-            </div>
-            <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">{{ svc.price }}</span>
-            <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;" style-hover="color:#FF6D29;">Reservar →</a>
+        <div data-fade="9" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(22,19,22,.14);">
+          <span style="font-family:'Bebas',sans-serif; font-size:48px; color:rgba(22,19,22,.22);">01</span>
+          <div>
+            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:23px;">Classic Cut</h3>
+            <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">Corte clásico con asesoría</p>
           </div>
-        </sc-for>
+          <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">$50</span>
+          <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
+        </div>
+        <div data-fade="10" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(22,19,22,.14);">
+          <span style="font-family:'Bebas',sans-serif; font-size:48px; color:rgba(22,19,22,.22);">02</span>
+          <div>
+            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:23px;">Skin Fade</h3>
+            <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">Degradado a piel, definición limpia</p>
+          </div>
+          <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">$55</span>
+          <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
+        </div>
+        <div data-fade="11" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(22,19,22,.14);">
+          <span style="font-family:'Bebas',sans-serif; font-size:48px; color:rgba(22,19,22,.22);">03</span>
+          <div>
+            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:23px;">All-Scissors Cut</h3>
+            <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">Trabajo 100% a tijera</p>
+          </div>
+          <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">$60</span>
+          <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
+        </div>
+        <div data-fade="12" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(22,19,22,.14);">
+          <span style="font-family:'Bebas',sans-serif; font-size:48px; color:rgba(22,19,22,.22);">04</span>
+          <div>
+            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:23px;">Guided Cut</h3>
+            <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">Corte con asesoría de imagen y rostro</p>
+          </div>
+          <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">$75</span>
+          <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
+        </div>
+        <div data-fade="13" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(22,19,22,.14);">
+          <span style="font-family:'Bebas',sans-serif; font-size:48px; color:rgba(22,19,22,.22);">05</span>
+          <div>
+            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:23px;">Line up &amp; extras</h3>
+            <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">Perfilado, detalles y complementos</p>
+          </div>
+          <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">desde $10</span>
+          <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
+        </div>
       </div>
       <p data-fade="13" style="margin-top:34px; font-size:14px; color:#453027;">Primera visita guiada con <strong style="color:#C24E14;">50% off</strong> (código <strong>firstvisit</strong>).</p>
     </div>
@@ -188,58 +219,89 @@ html{scroll-behavior:smooth;}
   <section id="metodo" data-screen-label="El Método" style="padding:130px 24px 110px; background:radial-gradient(ellipse 80% 60% at 20% 0%, rgba(69,48,39,.4) 0%, transparent 60%);">
     <div style="max-width:1080px; margin:0 auto;">
       <p data-fade="14" style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.3em; color:#FF6D29;">El método Structure</p>
-      <p ref="{{ animatedTextRef }}" style="font-family:'Melodrame',serif; font-weight:400; font-size:clamp(28px,3.4vw,46px); line-height:1.35; margin:26px 0 70px; max-width:980px; color:#FFFFFF;">Analizamos tu rostro y tu cabello, definimos el estilo que de verdad te queda, lo ejecutamos con precisión y te enseñamos a mantenerlo. Menos decisiones, mejor tomadas.</p>
+      <p style="font-family:'Melodrame',serif; font-weight:400; font-size:clamp(28px,3.4vw,46px); line-height:1.35; margin:26px 0 70px; max-width:980px; color:#FFFFFF;">Analizamos tu rostro y tu cabello, definimos el estilo que de verdad te queda, lo ejecutamos con precisión y te enseñamos a mantenerlo. Menos decisiones, mejor tomadas.</p>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:32px;">
-        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
-          <div data-fade="{{ st.fade }}" style="border-top:1px solid rgba(255,255,255,.14); padding-top:20px;">
-            <span style="font-family:'Bebas',sans-serif; font-size:17px; color:#FF6D29; letter-spacing:.14em;">{{ st.num }}</span>
-            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; margin:10px 0 8px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">{{ st.name }}</h3>
-            <p style="color:#BABABA; font-size:14px; line-height:1.55; font-weight:300;">{{ st.desc }}</p>
-          </div>
-        </sc-for>
+        <div data-fade="15" style="border-top:1px solid rgba(255,255,255,.14); padding-top:20px;">
+          <span style="font-family:'Bebas',sans-serif; font-size:17px; color:#FF6D29; letter-spacing:.14em;">01</span>
+          <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; margin:10px 0 8px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Analiza</h3>
+          <p style="color:#BABABA; font-size:14px; line-height:1.55; font-weight:300;">Estudiamos tu rostro, tu cabello y tu rutina.</p>
+        </div>
+        <div data-fade="16" style="border-top:1px solid rgba(255,255,255,.14); padding-top:20px;">
+          <span style="font-family:'Bebas',sans-serif; font-size:17px; color:#FF6D29; letter-spacing:.14em;">02</span>
+          <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; margin:10px 0 8px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Define</h3>
+          <p style="color:#BABABA; font-size:14px; line-height:1.55; font-weight:300;">Elegimos juntos el estilo que de verdad te queda.</p>
+        </div>
+        <div data-fade="17" style="border-top:1px solid rgba(255,255,255,.14); padding-top:20px;">
+          <span style="font-family:'Bebas',sans-serif; font-size:17px; color:#FF6D29; letter-spacing:.14em;">03</span>
+          <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; margin:10px 0 8px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Ejecuta</h3>
+          <p style="color:#BABABA; font-size:14px; line-height:1.55; font-weight:300;">Precisión total, sin prisa y sin atajos.</p>
+        </div>
+        <div data-fade="18" style="border-top:1px solid rgba(255,255,255,.14); padding-top:20px;">
+          <span style="font-family:'Bebas',sans-serif; font-size:17px; color:#FF6D29; letter-spacing:.14em;">04</span>
+          <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; margin:10px 0 8px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Mantén</h3>
+          <p style="color:#BABABA; font-size:14px; line-height:1.55; font-weight:300;">Te enseñamos a mantenerlo día a día.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 6.5 · BARBEROS (game stats) -->
+  <!-- 6.5 · BARBEROS -->
   <section id="barberos" data-screen-label="Barberos" style="padding:40px 24px 120px; position:relative; z-index:1;">
     <div style="max-width:1120px; margin:0 auto;">
       <p data-fade="30" style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.3em; color:#FF6D29;">El equipo</p>
       <h2 data-fade="31" style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(36px,4.4vw,60px); margin:12px 0 14px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Elige a tu barbero</h2>
       <p data-fade="32" style="color:#BABABA; font-size:15px; font-weight:300; margin-bottom:50px; max-width:480px; line-height:1.6;">Cada uno con su especialidad. Revisa sus stats y reserva con quien va contigo.</p>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:24px; align-items:stretch;">
-        <sc-for list="{{ barbers }}" as="bb" hint-placeholder-count="3">
-          <div data-fade="{{ bb.fade }}" style="display:flex; flex-direction:column; background:linear-gradient(160deg,#221C1A 0%,#161316 75%); border:1px solid {{ bb.borderColor }}; border-radius:24px; overflow:hidden; transition:transform .35s ease, box-shadow .35s ease;" style-hover="transform:translateY(-8px); box-shadow:0 24px 50px rgba(255,109,41,.18);">
-            <div style="position:relative; height:320px; background:#1D1815;">
-              <img src="{{ bb.photo }}" alt="{{ bb.name }}" loading="lazy" style="width:100%; height:100%; object-fit:{{ bb.fit }}; object-position:center 20%; padding:{{ bb.pad }};">
-              <span style="position:absolute; top:16px; left:16px; font-family:'Bebas',sans-serif; font-size:15px; letter-spacing:.16em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:7px 16px;">{{ bb.level }}</span>
-              <span style="position:absolute; top:16px; right:16px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#FFFFFF; background:rgba(22,19,22,.7); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:7px 14px;">{{ bb.classTag }}</span>
-              <div style="position:absolute; inset:auto 0 0 0; height:120px; background:linear-gradient(180deg, transparent, rgba(22,19,22,.95)); display:flex; align-items:flex-end; padding:18px;">
-                <div>
-                  <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:28px; color:#FFFFFF;">{{ bb.name }}</h3>
-                  <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.24em; color:#BABABA; margin-top:4px;">{{ bb.role }}</p>
-                </div>
-              </div>
-            </div>
-            <div style="padding:24px 24px 20px; display:flex; flex-direction:column; gap:14px; flex:1;">
-              <sc-for list="{{ bb.stats }}" as="st" hint-placeholder-count="5">
-                <div style="display:flex; flex-direction:column; gap:6px;">
-                  <div style="display:flex; align-items:baseline; justify-content:space-between;">
-                    <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">{{ st.label }}</span>
-                    <span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">{{ st.value }}</span>
-                  </div>
-                  <div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;">
-                    <div data-statbar="{{ st.value }}" style="height:100%; width:{{ st.width }}; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div>
-                  </div>
-                </div>
-              </sc-for>
-              <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:auto; padding-top:16px; border-top:1px solid rgba(255,255,255,.09);">
-                <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.18em; color:#8A7A6E;">{{ bb.special }}</span>
-                <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.2em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:10px 22px; white-space:nowrap;" style-hover="color:#161316; filter:brightness(1.1);">{{ bb.cta }}</a>
+        <!-- Alex -->
+        <div data-fade="33" style="display:flex; flex-direction:column; background:linear-gradient(160deg,#221C1A 0%,#161316 75%); border:1px solid rgba(255,255,255,.14); border-radius:24px; overflow:hidden;">
+          <div style="position:relative; height:320px; background:#1D1815;">
+            <img src="assets/barber-alex.jpg" alt="Alex, barbero especialista en fades en Structure" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:center 20%;">
+            <span style="position:absolute; top:16px; left:16px; font-family:'Bebas',sans-serif; font-size:15px; letter-spacing:.16em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:7px 16px;">LVL 8</span>
+            <span style="position:absolute; top:16px; right:16px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#FFFFFF; background:rgba(22,19,22,.7); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:7px 14px;">Clase: Fade Master</span>
+            <div style="position:absolute; inset:auto 0 0 0; height:120px; background:linear-gradient(180deg, transparent, rgba(22,19,22,.95)); display:flex; align-items:flex-end; padding:18px;">
+              <div>
+                <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:28px; color:#FFFFFF;">Alex</h3>
+                <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.24em; color:#BABABA; margin-top:4px;">Barbero · Fade specialist</p>
               </div>
             </div>
           </div>
-        </sc-for>
+          <div style="padding:24px 24px 20px; display:flex; flex-direction:column; gap:14px; flex:1;">
+            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Fades</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">95</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="95%" style="height:100%; width:95%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
+            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Tijera</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">90</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="90%" style="height:100%; width:90%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
+            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Line up</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">94</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="94%" style="height:100%; width:94%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
+            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Rapidez</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">88</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="88%" style="height:100%; width:88%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
+            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Estilo</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">92</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="92%" style="height:100%; width:92%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:auto; padding-top:16px; border-top:1px solid rgba(255,255,255,.09);">
+              <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.18em; color:#8A7A6E;">Ulti: Skin fade espejo</span>
+              <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="btn-primary" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.2em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:10px 22px; white-space:nowrap;">Reservar</a>
+            </div>
+          </div>
+        </div>
+        <!-- Bri -->
+        <div data-fade="34" style="display:flex; flex-direction:column; background:linear-gradient(160deg,#221C1A 0%,#161316 75%); border:1px solid rgba(255,109,41,.45); border-radius:24px; overflow:hidden;">
+          <div style="position:relative; height:320px; background:#1D1815;">
+            <img src="assets/barber-bri.jpg" alt="Bri, fundadora y master barber de Structure Men's Studio" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:center 20%;">
+            <span style="position:absolute; top:16px; left:16px; font-family:'Bebas',sans-serif; font-size:15px; letter-spacing:.16em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:7px 16px;">LVL 10</span>
+            <span style="position:absolute; top:16px; right:16px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#FFFFFF; background:rgba(22,19,22,.7); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:7px 14px;">Clase: Precision Master</span>
+            <div style="position:absolute; inset:auto 0 0 0; height:120px; background:linear-gradient(180deg, transparent, rgba(22,19,22,.95)); display:flex; align-items:flex-end; padding:18px;">
+              <div>
+                <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:28px; color:#FFFFFF;">Bri</h3>
+                <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.24em; color:#BABABA; margin-top:4px;">Founder · Master barber</p>
+              </div>
+            </div>
+          </div>
+          <div style="padding:24px 24px 20px; display:flex; flex-direction:column; gap:14px; flex:1;">
+            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Tijera</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">98</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="98%" style="height:100%; width:98%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
+            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Asesoría</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">96</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="96%" style="height:100%; width:96%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
+            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Detalle</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">95</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="95%" style="height:100%; width:95%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
+            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Fades</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">92</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="92%" style="height:100%; width:92%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
+            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Educación</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">94</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="94%" style="height:100%; width:94%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:auto; padding-top:16px; border-top:1px solid rgba(255,255,255,.09);">
+              <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.18em; color:#8A7A6E;">Ulti: Asesoría de rostro</span>
+              <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="btn-primary" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.2em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:10px 22px; white-space:nowrap;">Reservar</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -248,23 +310,51 @@ html{scroll-behavior:smooth;}
   <section id="galeria" data-screen-label="Galería" style="padding:40px 24px 120px; position:relative; z-index:1;">
     <div style="max-width:1080px; margin:0 auto;">
       <h2 data-fade="19" style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(36px,4.4vw,60px); margin-bottom:60px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">El trabajo</h2>
-      <sc-for list="{{ galleryCards }}" as="card" hint-placeholder-count="3">
-        <div style="position:sticky; top:{{ card.top }}; margin-bottom:60px;">
-          <div data-sticky-card="{{ $index }}" style="background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; padding:28px; will-change:transform; transform-origin:center top;">
-            <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px;">
-              <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; color:#FFFFFF;">{{ card.title }}</h3>
-              <span style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em; color:#BABABA;">{{ card.tag }}</span>
+      <div style="position:sticky; top:96px; margin-bottom:60px;">
+        <div style="background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; padding:28px;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px;">
+            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; color:#FFFFFF;">Precisión a tijera</h3>
+            <span style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em; color:#BABABA;">All-scissors</span>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; height:340px;">
+            <div style="display:grid; grid-template-rows:1fr 1fr; gap:16px;">
+              <img src="assets/photo-1.jpg" alt="Corte a tijera en Structure" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+              <img src="assets/photo-2.jpg" alt="Detalle de corte masculino en Structure" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
             </div>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; height:340px;">
-              <div style="display:grid; grid-template-rows:1fr 1fr; gap:16px;">
-                <img src="{{ card.imgA }}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
-                <img src="{{ card.imgB }}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
-              </div>
-              <img src="{{ card.imgC }}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
-            </div>
+            <img src="assets/photo-3.jpg" alt="Resultado de trabajo a tijera en Structure" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
           </div>
         </div>
-      </sc-for>
+      </div>
+      <div style="position:sticky; top:124px; margin-bottom:60px;">
+        <div style="background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; padding:28px;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px;">
+            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; color:#FFFFFF;">Definición y línea</h3>
+            <span style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em; color:#BABABA;">Detalle</span>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; height:340px;">
+            <div style="display:grid; grid-template-rows:1fr 1fr; gap:16px;">
+              <img src="assets/photo-4.jpg" alt="Perfilado y línea en Structure" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+              <img src="assets/photo-5.jpg" alt="Skin fade definido en Structure" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+            </div>
+            <img src="assets/photo-6.jpg" alt="Detalle de degradado en Structure" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+          </div>
+        </div>
+      </div>
+      <div style="position:sticky; top:152px; margin-bottom:60px;">
+        <div style="background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; padding:28px;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px;">
+            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; color:#FFFFFF;">El resultado</h3>
+            <span style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em; color:#BABABA;">Estilo</span>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; height:340px;">
+            <div style="display:grid; grid-template-rows:1fr 1fr; gap:16px;">
+              <img src="assets/photo-7.jpg" alt="Estilo terminado en Structure" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+              <img src="assets/photo-3.jpg" alt="Corte de precisión en Structure" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+            </div>
+            <img src="assets/photo-4.jpg" alt="Acabado final en Structure" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -273,16 +363,30 @@ html{scroll-behavior:smooth;}
     <div style="max-width:1080px; margin:0 auto;">
       <h2 data-fade="20" style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(36px,4.4vw,60px); margin-bottom:56px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Lo que dicen</h2>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px;">
-        <sc-for list="{{ reviews }}" as="rev" hint-placeholder-count="3">
-          <div data-fade="{{ rev.fade }}" style="background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:20px; padding:34px 30px; display:flex; flex-direction:column; gap:18px;">
-            <span style="font-family:'Melodrame',serif; font-size:56px; line-height:.6; color:#FF6D29;">“</span>
-            <p style="color:#BABABA; font-size:15px; line-height:1.65; flex:1;">{{ rev.text }}</p>
-            <div style="display:flex; align-items:center; justify-content:space-between;">
-              <span style="font-weight:700; font-size:14px; color:#FFFFFF;">{{ rev.name }}</span>
-              <span style="font-family:'Bebas',sans-serif; font-size:12px; letter-spacing:.2em; color:#BABABA; border:1px solid rgba(255,255,255,.15); border-radius:999px; padding:5px 12px;">5.0★ · Google</span>
-            </div>
+        <div data-fade="21" style="background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:20px; padding:34px 30px; display:flex; flex-direction:column; gap:18px;">
+          <span style="font-family:'Melodrame',serif; font-size:56px; line-height:.6; color:#FF6D29;">“</span>
+          <p style="color:#BABABA; font-size:15px; line-height:1.65; flex:1;">Despues de mucho tiempo buscando un buen barbero en Miami, finalmente encontre a Bri. Es muy atenta, profesional y domina perfectamente su trabajo.</p>
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <span style="font-weight:700; font-size:14px; color:#FFFFFF;">Alberto D.</span>
+            <span style="font-family:'Bebas',sans-serif; font-size:12px; letter-spacing:.2em; color:#BABABA; border:1px solid rgba(255,255,255,.15); border-radius:999px; padding:5px 12px;">5.0★ · Google</span>
           </div>
-        </sc-for>
+        </div>
+        <div data-fade="22" style="background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:20px; padding:34px 30px; display:flex; flex-direction:column; gap:18px;">
+          <span style="font-family:'Melodrame',serif; font-size:56px; line-height:.6; color:#FF6D29;">“</span>
+          <p style="color:#BABABA; font-size:15px; line-height:1.65; flex:1;">The barber was professional, detail-oriented, and really took the time to understand what I wanted. Clean shop, great atmosphere, top-notch service from start to finish. Walked out feeling fresh and confident. Highly recommend.</p>
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <span style="font-weight:700; font-size:14px; color:#FFFFFF;">Juan Carlos Z.</span>
+            <span style="font-family:'Bebas',sans-serif; font-size:12px; letter-spacing:.2em; color:#BABABA; border:1px solid rgba(255,255,255,.15); border-radius:999px; padding:5px 12px;">5.0★ · Google</span>
+          </div>
+        </div>
+        <div data-fade="23" style="background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:20px; padding:34px 30px; display:flex; flex-direction:column; gap:18px;">
+          <span style="font-family:'Melodrame',serif; font-size:56px; line-height:.6; color:#FF6D29;">“</span>
+          <p style="color:#BABABA; font-size:15px; line-height:1.65; flex:1;">Bri is an excellent barber! She does a fantastic job with my hair and beard and has a comfortable, private space. Lots of little details make the whole experience feel special.</p>
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <span style="font-weight:700; font-size:14px; color:#FFFFFF;">Vornskr3</span>
+            <span style="font-family:'Bebas',sans-serif; font-size:12px; letter-spacing:.2em; color:#BABABA; border:1px solid rgba(255,255,255,.15); border-radius:999px; padding:5px 12px;">5.0★ · Google</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -292,7 +396,7 @@ html{scroll-behavior:smooth;}
     <div data-fade="24" style="max-width:1080px; margin:0 auto; background:linear-gradient(135deg, rgba(69,48,39,.9) 0%, #161316 60%), radial-gradient(ellipse at 80% 20%, rgba(255,109,41,.25), transparent 60%); border:1px solid rgba(255,109,41,.35); border-radius:28px; padding:clamp(40px,6vw,80px); text-align:center; display:flex; flex-direction:column; align-items:center; gap:24px;">
       <h2 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(34px,4.4vw,56px); background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Aparta tu turno</h2>
       <p style="color:#BABABA; font-size:16px; max-width:460px; line-height:1.6; font-weight:300;">Solo con cita. Reserva online y llega a tu hora — el resto lo hacemos nosotros.</p>
-      <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" style="display:inline-block; padding:18px 54px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:17px; letter-spacing:.26em;" style-hover="color:#161316; filter:brightness(1.1);">Reservar cita</a>
+      <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="btn-primary" style="display:inline-block; padding:18px 54px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:17px; letter-spacing:.26em;">Reservar cita</a>
       <p style="font-size:14px; color:#BABABA;">Nuestra recepcionista virtual te agenda en segundos, 24/7.</p>
     </div>
   </section>
@@ -306,12 +410,18 @@ html{scroll-behavior:smooth;}
         <p style="color:#BABABA; font-size:16px; line-height:1.7; max-width:480px; font-weight:300;">Structure nace de una idea simple: un buen corte empieza antes de la tijera. Aquí no adivinamos — analizamos, definimos y ejecutamos. Orden, precisión y calma, en el corazón de West Brickell.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:16px;">
-        <sc-for list="{{ infoBoxes }}" as="box" hint-placeholder-count="3">
-          <div data-fade="{{ box.fade }}" style="background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:24px 26px;">
-            <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.26em; color:#FF6D29; margin-bottom:8px;">{{ box.label }}</p>
-            <p style="color:#FFFFFF; font-size:15px; line-height:1.55;">{{ box.value }}</p>
-          </div>
-        </sc-for>
+        <div data-fade="26" style="background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:24px 26px;">
+          <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.26em; color:#FF6D29; margin-bottom:8px;">Ubicación</p>
+          <p style="color:#FFFFFF; font-size:15px; line-height:1.55;">1110 SW 2nd Ave, Suite 4, Miami FL 33130 (West Brickell)</p>
+        </div>
+        <div data-fade="27" style="background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:24px 26px;">
+          <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.26em; color:#FF6D29; margin-bottom:8px;">Horario</p>
+          <p style="color:#FFFFFF; font-size:15px; line-height:1.55;">Solo con cita — reserva online</p>
+        </div>
+        <div data-fade="28" style="background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:24px 26px;">
+          <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.26em; color:#FF6D29; margin-bottom:8px;">Contacto</p>
+          <p style="color:#FFFFFF; font-size:15px; line-height:1.55;">Instagram @structuremensstudio · Reserva 24/7 con la recepcionista</p>
+        </div>
       </div>
     </div>
     <div data-fade="29" style="max-width:1080px; margin:70px auto 0; border:1px solid rgba(255,255,255,.12); border-radius:24px; overflow:hidden;">
@@ -323,17 +433,15 @@ html{scroll-behavior:smooth;}
   <footer data-screen-label="Footer" style="border-top:1px solid rgba(255,255,255,.08); padding:70px 24px 40px; position:relative; z-index:2; background:linear-gradient(180deg,#161316 0%,#1D1613 100%);">
     <div style="max-width:1080px; margin:0 auto; display:flex; flex-direction:column; gap:50px;">
       <div style="display:flex; align-items:center; gap:16px;">
-        <img src="assets/logo.png" alt="" style="width:56px; height:56px; object-fit:contain;">
+        <img src="assets/logo.png" alt="Structure Men's Studio" width="56" height="56" style="width:56px; height:56px; object-fit:contain;">
         <span style="font-family:'Melodrame',serif; font-weight:400; font-size:clamp(24px,3vw,36px); background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Structure Men's Studio</span>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:40px 60px;">
         <div style="display:flex; flex-direction:column; gap:10px;">
           <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.26em; color:#8A7A6E;">Navegar</span>
-          <a href="#servicios" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;" style-hover="color:#FF6D29;">Servicios</a>
-          
-          <a href="#reservar" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;" style-hover="color:#FF6D29;">Reservar</a>
-          <a href="Blog.dc.html" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;" style-hover="color:#FF6D29;">Blog</a>
-          
+          <a href="#servicios" class="lnk" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;">Servicios</a>
+          <a href="#reservar" class="lnk" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;">Reservar</a>
+          <a href="Blog.dc.html" class="lnk" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;">Blog</a>
         </div>
         <div style="display:flex; flex-direction:column; gap:10px;">
           <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.26em; color:#8A7A6E;">Visítanos</span>
@@ -341,7 +449,7 @@ html{scroll-behavior:smooth;}
         </div>
         <div style="display:flex; flex-direction:column; gap:10px;">
           <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.26em; color:#8A7A6E;">Síguenos</span>
-          <a href="https://instagram.com/structuremensstudio" target="_blank" rel="noopener" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;" style-hover="color:#FF6D29;">@structuremensstudio</a>
+          <a href="https://instagram.com/structuremensstudio" target="_blank" rel="noopener" class="lnk" style="font-family:'Manrope',sans-serif; font-size:16px; font-weight:500; color:#FFFFFF;">@structuremensstudio</a>
         </div>
       </div>
       <p style="font-size:12px; color:#8A7A6E; letter-spacing:.08em;">Sitio por The303 Creative LLC · © 2026 Structure Men's Studio</p>
@@ -349,230 +457,48 @@ html{scroll-behavior:smooth;}
   </footer>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{
-  &quot;booksyUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://web.getsquire.com/brands/bri-barber-331&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Reservas&quot; }
-}">
-class Component extends DCLogic {
-  renderVals() {
-    const booksyUrl = this.props.booksyUrl ?? 'https://web.getsquire.com/brands/bri-barber-331';
-    return {
-      booksyUrl,
-      magnetRef: (el) => { this._magnet = el; },
-      marqueeSection: (el) => { this._mSection = el; },
-      marqueeRow1: (el) => { this._mRow1 = el; },
-      animatedTextRef: (el) => { this._animText = el; },
-      services: [
-        { num: '01', name: 'Classic Cut', desc: 'Corte clásico con asesoría', price: '$50', fade: 9 },
-        { num: '02', name: 'Skin Fade', desc: 'Degradado a piel, definición limpia', price: '$55', fade: 10 },
-        { num: '03', name: 'All-Scissors Cut', desc: 'Trabajo 100% a tijera', price: '$60', fade: 11 },
-        { num: '04', name: 'Guided Cut', desc: 'Corte con asesoría de imagen y rostro', price: '$75', fade: 12 },
-        { num: '05', name: 'Line up & extras', desc: 'Perfilado, detalles y complementos', price: 'desde $10', fade: 13 },
-      ],
-      steps: [
-        { num: '01', name: 'Analiza', desc: 'Estudiamos tu rostro, tu cabello y tu rutina.', fade: 15 },
-        { num: '02', name: 'Define', desc: 'Elegimos juntos el estilo que de verdad te queda.', fade: 16 },
-        { num: '03', name: 'Ejecuta', desc: 'Precisión total, sin prisa y sin atajos.', fade: 17 },
-        { num: '04', name: 'Mantén', desc: 'Te enseñamos a mantenerlo día a día.', fade: 18 },
-      ],
-      galleryCards: [
-        { title: 'Precisión a tijera', tag: 'All-scissors', top: '96px', imgA: 'assets/photo-1.jpg', imgB: 'assets/photo-2.jpg', imgC: 'assets/photo-3.jpg' },
-        { title: 'Definición y línea', tag: 'Detalle', top: '124px', imgA: 'assets/photo-4.jpg', imgB: 'assets/photo-5.jpg', imgC: 'assets/photo-6.jpg' },
-        { title: 'El resultado', tag: 'Estilo', top: '152px', imgA: 'assets/photo-7.jpg', imgB: 'assets/photo-3.jpg', imgC: 'assets/photo-4.jpg' },
-      ],
-      reviews: [
-        { text: 'Despues de mucho tiempo buscando un buen barbero en Miami, finalmente encontre a Bri. Es muy atenta, profesional y domina perfectamente su trabajo.', name: 'Alberto D.', fade: 21 },
-        { text: 'The barber was professional, detail-oriented, and really took the time to understand what I wanted. Clean shop, great atmosphere, top-notch service from start to finish. Walked out feeling fresh and confident. Highly recommend.', name: 'Juan Carlos Z.', fade: 22 },
-        { text: 'Bri is an excellent barber! She does a fantastic job with my hair and beard and has a comfortable, private space. Lots of little details make the whole experience feel special.', name: 'Vornskr3', fade: 23 },
-      ],
-      barbers: [
-        {
-          fade: 33, name: 'Alex', role: 'Barbero · Fade specialist', level: 'LVL 8',
-          classTag: 'Clase: Fade Master', photo: 'assets/barber-alex.jpg', fit: 'cover', pad: '0',
-          borderColor: 'rgba(255,255,255,.14)', special: 'Ulti: Skin fade espejo',
-          cta: 'Reservar', ctaHref: this.props.booksyUrl ?? 'https://web.getsquire.com/brands/bri-barber-331',
-          stats: [
-            { label: 'Fades', value: 95, width: '95%' },
-            { label: 'Tijera', value: 90, width: '90%' },
-            { label: 'Line up', value: 94, width: '94%' },
-            { label: 'Rapidez', value: 88, width: '88%' },
-            { label: 'Estilo', value: 92, width: '92%' },
-          ],
-        },
-        {
-          fade: 34, name: 'Bri', role: 'Founder · Master barber', level: 'LVL 10',
-          classTag: 'Clase: Precision Master', photo: 'assets/barber-bri.jpg', fit: 'cover', pad: '0',
-          borderColor: 'rgba(255,109,41,.45)', special: 'Ulti: Asesoría de rostro',
-          cta: 'Reservar', ctaHref: this.props.booksyUrl ?? 'https://web.getsquire.com/brands/bri-barber-331',
-          stats: [
-            { label: 'Tijera', value: 98, width: '98%' },
-            { label: 'Asesoría', value: 96, width: '96%' },
-            { label: 'Detalle', value: 95, width: '95%' },
-            { label: 'Fades', value: 92, width: '92%' },
-            { label: 'Educación', value: 94, width: '94%' },
-          ],
-        }
-      ],
-      infoBoxes: [
-        { label: 'Ubicación', value: '1110 SW 2nd Ave, Suite 4, Miami FL 33130 (West Brickell)', fade: 26 },
-        { label: 'Horario', value: 'Solo con cita — reserva online', fade: 27 },
-        { label: 'Contacto', value: 'Instagram @structuremensstudio · Reserva 24/7 con la recepcionista', fade: 28 },
-      ],
-    };
-  }
 
-  componentDidMount() {
-    this._setupFadeIn();
-    this._setupScroll();
-    this._setupMagnet();
-    this._setupAnimatedText();
-  }
-
-  componentWillUnmount() {
-    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
-    if (this._fadeFallback) window.removeEventListener('scroll', this._fadeFallback);
-    if (this._fadeInterval) clearInterval(this._fadeInterval);
-    if (this._statInterval) clearInterval(this._statInterval);
-    if (this._magnetCleanup) this._magnetCleanup();
-  }
-
-  _setupFadeIn() {
-    if (this._fadeSetupDone) return;
-    this._fadeSetupDone = true;
-    // WAAPI-only fade system: no inline opacity/transition is EVER written,
-    // so no stuck CSS transition can hold an element at opacity 0.
-    this._revealedIds = this._revealedIds || new Set();
-    const revealed = this._revealedIds;
-    const play = (el) => {
-      const id = el.getAttribute('data-fade');
-      if (revealed.has(id)) return;
-      revealed.add(id);
-      // cancel any pinned/stray animations before playing ours
-      if (el.getAnimations) el.getAnimations().forEach((a) => a.cancel());
-      const delay = (parseInt(id, 10) % 5) * 120;
-      const anim = el.animate(
-        [{ opacity: 0, transform: 'translateY(30px)' }, { opacity: 1, transform: 'none' }],
-        { duration: 700, delay, easing: 'cubic-bezier(.25,.1,.25,1)', fill: 'backwards' }
-      );
-      // force-complete by wall clock: if the frame timeline is frozen (screenshot
-      // contexts), finish() jumps to the final state so nothing stays at opacity 0
-      setTimeout(() => { try { anim.finish(); } catch (e) {} }, delay + 750);
-    };
-    const sweep = () => {
-      document.querySelectorAll('[data-fade]').forEach((el) => {
-        if (revealed.has(el.getAttribute('data-fade'))) return;
-        const r = el.getBoundingClientRect();
-        if (r.top < window.innerHeight + 50 && r.bottom > -50) play(el);
-      });
-    };
-    this._fadeFallback = sweep;
-    window.addEventListener('scroll', sweep, { passive: true });
-    this._fadeInterval = setInterval(sweep, 400);
-    sweep();
-    // stat bars: static width is the final value; animate a grow-in once when visible
-    this._statsDone = this._statsDone || new Set();
-    const statSweep = () => {
-      document.querySelectorAll('[data-statbar]').forEach((el, i) => {
-        const key = i + ':' + el.getAttribute('data-statbar');
-        if (this._statsDone.has(key)) return;
-        const r = el.getBoundingClientRect();
-        if (r.top < window.innerHeight - 40 && r.bottom > 0) {
-          this._statsDone.add(key);
-          if (el.getAnimations) el.getAnimations().forEach((a) => a.cancel());
-          const anim = el.animate(
-            [{ width: '0%' }, { width: getComputedStyle(el).width }],
-            { duration: 900, delay: (i % 5) * 90, easing: 'cubic-bezier(.25,.1,.25,1)' }
-          );
-          setTimeout(() => { try { anim.finish(); } catch (e) {} }, (i % 5) * 90 + 950);
-        }
-      });
-    };
-    window.addEventListener('scroll', statSweep, { passive: true });
-    this._statInterval = setInterval(statSweep, 400);
-    statSweep();
-  }
-
-  _setupScroll() {
-    const cards = Array.from(document.querySelectorAll('[data-sticky-card]'));
-    const tick = () => {
-      const y = window.scrollY;
-      if (this._mSection && this._mRow1) {
-        const top = this._mSection.offsetTop;
-        const off = (y - top + window.innerHeight) * 0.3;
-        this._mRow1.style.transform = 'translateX(' + (-off * 0.6) + 'px)';
+<!-- Animaciones (reemplaza support.js) -->
+<script>
+(function(){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var el=e.target, id=parseInt(el.getAttribute('data-fade'),10)||0;
+        el.style.transitionDelay=((id%5)*100)+'ms';
+        el.classList.add('in'); io.unobserve(el);
       }
-      const total = cards.length;
-      cards.forEach((card, i) => {
-        const wrap = card.parentElement;
-        const rect = wrap.getBoundingClientRect();
-        const stuckAt = 96 + i * 28;
-        const progress = Math.min(Math.max((stuckAt + 40 - rect.top) / 400, 0), 1);
-        const targetScale = 1 - (total - 1 - i) * 0.03;
-        const scale = 1 - (1 - targetScale) * progress;
-        card.style.transform = 'scale(' + scale + ')';
-      });
-      if (this._chars) {
-        const rect = this._animText.getBoundingClientRect();
-        const vh = window.innerHeight;
-        const start = vh * 0.8, end = vh * 0.2;
-        const p = Math.min(Math.max((start - rect.top) / (start - end + rect.height), 0), 1);
-        const n = this._chars.length;
-        this._chars.forEach((span, i) => {
-          const t = Math.min(Math.max(p * n * 1.15 - i, 0), 1);
-          span.style.opacity = String(0.2 + 0.8 * t);
-        });
-      }
-    };
-    this._onScroll = () => requestAnimationFrame(tick);
-    window.addEventListener('scroll', this._onScroll, { passive: true });
-    tick();
-  }
-
-  _setupMagnet() {
-    const el = this._magnet;
-    if (!el) return;
-    const padding = 150, strength = 3;
-    const onMove = (e) => {
-      const r = el.getBoundingClientRect();
-      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-      const dx = e.clientX - cx, dy = e.clientY - cy;
-      if (Math.abs(dx) < r.width / 2 + padding && Math.abs(dy) < r.height / 2 + padding) {
-        el.style.transition = 'transform 0.3s ease-out';
-        el.style.transform = 'translate3d(' + (dx / strength) + 'px,' + (dy / strength) + 'px,0)';
-      } else {
-        el.style.transition = 'transform 0.6s ease-in-out';
-        el.style.transform = 'translate3d(0,0,0)';
-      }
-    };
-    window.addEventListener('mousemove', onMove, { passive: true });
-    this._magnetCleanup = () => window.removeEventListener('mousemove', onMove);
-  }
-
-  _setupAnimatedText() {
-    const p = this._animText;
-    if (!p || p.querySelector('span')) return;
-    const text = p.textContent;
-    p.textContent = '';
-    this._chars = text.split('').map((ch) => {
-      const s = document.createElement('span');
-      s.textContent = ch;
-      s.style.opacity = '0.2';
-      p.appendChild(s);
-      return s;
     });
+  },{threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('[data-fade]').forEach(function(el){io.observe(el);});
+
+  var bars=document.querySelectorAll('[data-statbar]');
+  bars.forEach(function(el){el.style.width='0';});
+  var io2=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){var el=e.target;el.style.width=el.getAttribute('data-w');io2.unobserve(el);}
+    });
+  },{threshold:0.2});
+  bars.forEach(function(el){io2.observe(el);});
+
+  var logo=document.getElementById('hero-logo');
+  if(logo && window.matchMedia('(pointer:fine)').matches){
+    window.addEventListener('mousemove',function(ev){
+      var r=logo.getBoundingClientRect(), cx=r.left+r.width/2, cy=r.top+r.height/2;
+      var dx=ev.clientX-cx, dy=ev.clientY-cy, pad=150;
+      if(Math.abs(dx)<r.width/2+pad && Math.abs(dy)<r.height/2+pad){
+        logo.style.transition='transform .3s ease-out';
+        logo.style.transform='translate3d('+(dx/3)+'px,'+(dy/3)+'px,0)';
+      } else {
+        logo.style.transition='transform .6s ease-in-out';
+        logo.style.transform='translate3d(0,0,0)';
+      }
+    },{passive:true});
   }
-}
+})();
 </script>
 
-<!-- RECEPCIONISTA STRUCTURE (The303) -->
-<!-- ============================================================
-     RECEPCIONISTA STRUCTURE — widget de chat
-     Pegar este bloque completo justo antes de </body> en el sitio.
-     Cambiar WEBHOOK_URL por la URL del webhook de n8n cuando esté listo.
-     Comportamiento: al hacer scroll el botón "salta" y saluda como
-     recepcionista; al abrir, chatea con la IA (n8n) que agenda y guarda
-     en Notion. Fallback: botón directo a reservar (Squire).
-============================================================ -->
+<!-- RECEPCIONISTA STRUCTURE (The303) — widget de chat -->
 <div id="rc-root"></div>
 <style>
 #rc-root{--rc-bg:#1c1a18;--rc-accent:#FF6D29;--rc-text:#EDE9E0;--rc-mut:#8A8578;font-family:'Manrope',system-ui,sans-serif}
@@ -601,8 +527,7 @@ class Component extends DCLogic {
 </style>
 <script>
 (function(){
-  // === CONFIG ===
-  var WEBHOOK_URL = "https://the303photography.app.n8n.cloud/webhook/recepcionista-structure";  // <- URL del webhook de n8n (recepcionista)
+  var WEBHOOK_URL = "https://the303photography.app.n8n.cloud/webhook/recepcionista-structure";
   var SQUIRE = "https://web.getsquire.com/brands/bri-barber-331";
   var GREETING = "¡Hola! Soy Sofía, la recepcionista de Structure 💈 ¿Te ayudo a agendar tu cita?";
   var sessionId = "web-" + Math.random().toString(36).slice(2);
@@ -626,8 +551,7 @@ class Component extends DCLogic {
 
   function add(t,who){var d=document.createElement('div');d.className='rc-m '+(who==='me'?'rc-me':'rc-bot');d.textContent=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
 
-  // salta y saluda al hacer scroll (una vez)
-  /*AUTOJUMP*/setTimeout(function(){if(!greeted&&!opened){greeted=true;btn.classList.add('jump');hi.textContent=GREETING;hi.classList.add('show');setTimeout(function(){hi.classList.remove('show');btn.classList.remove('jump');},8000);}},1500);
+  setTimeout(function(){if(!greeted&&!opened){greeted=true;btn.classList.add('jump');hi.textContent=GREETING;hi.classList.add('show');setTimeout(function(){hi.classList.remove('show');btn.classList.remove('jump');},8000);}},1500);
   window.addEventListener('scroll',function(){
     if(greeted||opened) return;
     if(window.scrollY>500){greeted=true;btn.classList.add('jump');hi.textContent=GREETING;hi.classList.add('show');
