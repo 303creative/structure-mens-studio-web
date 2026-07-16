@@ -10,15 +10,19 @@
 <meta property="og:type" content="business.business">
 <meta property="og:title" content="Structure Men's Studio — Barbería de precisión · West Brickell">
 <meta property="og:description" content="Analizamos tu rostro, definimos tu estilo y lo ejecutamos a la perfección. Solo con cita en West Brickell, Miami.">
-<meta property="og:image" content="https://structuremensstudio.com/assets/photo-1.jpg">
-<meta property="og:url" content="https://structuremensstudio.com/">
+<!-- TODO al conectar el dominio: cambiar og:image / og:url / twitter:image a structuremensstudio.com -->
+<meta property="og:image" content="https://structure-mens-studio-web.vercel.app/assets/photo-1.jpg">
+<meta property="og:url" content="https://structure-mens-studio-web.vercel.app/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Structure Men's Studio — Barbería de precisión · West Brickell">
 <meta name="twitter:description" content="Corte con asesoría, skin fades y trabajo a tijera. Solo con cita.">
-<meta name="twitter:image" content="https://structuremensstudio.com/assets/photo-1.jpg">
+<meta name="twitter:image" content="https://structure-mens-studio-web.vercel.app/assets/photo-1.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/otflag.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="assets/fonts/bebas.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/logo.png" as="image">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,13 +41,13 @@
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 25.7649, "longitude": -80.2007 },
   "areaServed": "West Brickell, Miami",
+  "sameAs": ["https://instagram.com/structuremensstudio"],
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "68" }
 }
 </script>
 <style>
   @font-face { font-family: 'Melodrame'; src: url('assets/fonts/melodrame.ttf') format('truetype'); font-display: swap; }
   @font-face { font-family: 'Bebas'; src: url('assets/fonts/bebas.ttf') format('truetype'); font-display: swap; }
-  @font-face { font-family: 'ArialNarrow7'; src: url('assets/fonts/arial-narrow.ttf') format('truetype'); font-display: swap; }
   @font-face { font-family: 'Otflag'; src: url('assets/fonts/otflag.otf') format('opentype'); font-display: swap; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body, #root { background: #161316; }
@@ -103,7 +107,7 @@
       <a href="#resenas" class="lnk" style="color:#BABABA;">Reseñas</a>
       <a href="Blog.dc.html" class="lnk" style="color:#BABABA;">Blog</a>
     </div>
-    <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="btn-primary" style="display:inline-block; padding:12px 26px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em;">Reservar</a>
+    <a href="https://web.getsquire.com/brands/bri-barber-331" onclick="if(window.rcOpen){window.rcOpen();return false;}" class="btn-primary" style="display:inline-block; padding:12px 26px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em;">Reservar</a>
   </nav>
 
   <!-- 2 · HERO -->
@@ -120,12 +124,12 @@
       </h1>
       <p data-fade="3" style="max-width:500px; color:#BABABA; font-size:16px; line-height:1.7; font-weight:300;">Barbería de precisión. Analizamos tu rostro y tu cabello, definimos el estilo que te queda y lo ejecutamos a la perfección.</p>
       <div data-fade="4" style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
-        <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="btn-primary" style="display:inline-block; padding:17px 42px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:16px; letter-spacing:.26em;">Reservar</a>
+        <a href="https://web.getsquire.com/brands/bri-barber-331" onclick="if(window.rcOpen){window.rcOpen();return false;}" class="btn-primary" style="display:inline-block; padding:17px 42px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:16px; letter-spacing:.26em;">Reservar</a>
         <a href="#servicios" style="display:inline-block; padding:16px 38px; border-radius:999px; border:1px solid rgba(255,255,255,.22); color:#FFFFFF; font-family:'Bebas',sans-serif; font-size:16px; letter-spacing:.26em;">Ver servicios</a>
       </div>
     </div>
     <div data-fade="5" style="display:flex; justify-content:center; position:relative;">
-      <img id="hero-logo" src="assets/logo.png" alt="Emblema Structure Men's Studio" width="380" height="380" style="width:min(380px,85%); filter:drop-shadow(0 30px 60px rgba(0,0,0,.65)); will-change:transform; transition:transform .6s ease-in-out;">
+      <img id="hero-logo" src="assets/logo.png" alt="Emblema Structure Men's Studio" width="380" height="380" fetchpriority="high" style="width:min(380px,85%); filter:drop-shadow(0 30px 60px rgba(0,0,0,.65)); will-change:transform; transition:transform .6s ease-in-out;">
     </div>
   </header>
 
@@ -172,7 +176,7 @@
             <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">Corte clásico con asesoría</p>
           </div>
           <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">$50</span>
-          <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
+          <a href="https://web.getsquire.com/brands/bri-barber-331" onclick="if(window.rcOpen){window.rcOpen();return false;}" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
         </div>
         <div data-fade="10" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(22,19,22,.14);">
           <span style="font-family:'Bebas',sans-serif; font-size:48px; color:rgba(22,19,22,.22);">02</span>
@@ -181,7 +185,7 @@
             <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">Degradado a piel, definición limpia</p>
           </div>
           <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">$55</span>
-          <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
+          <a href="https://web.getsquire.com/brands/bri-barber-331" onclick="if(window.rcOpen){window.rcOpen();return false;}" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
         </div>
         <div data-fade="11" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(22,19,22,.14);">
           <span style="font-family:'Bebas',sans-serif; font-size:48px; color:rgba(22,19,22,.22);">03</span>
@@ -190,7 +194,7 @@
             <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">Trabajo 100% a tijera</p>
           </div>
           <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">$60</span>
-          <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
+          <a href="https://web.getsquire.com/brands/bri-barber-331" onclick="if(window.rcOpen){window.rcOpen();return false;}" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
         </div>
         <div data-fade="12" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(22,19,22,.14);">
           <span style="font-family:'Bebas',sans-serif; font-size:48px; color:rgba(22,19,22,.22);">04</span>
@@ -199,7 +203,7 @@
             <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">Corte con asesoría de imagen y rostro</p>
           </div>
           <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">$75</span>
-          <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
+          <a href="https://web.getsquire.com/brands/bri-barber-331" onclick="if(window.rcOpen){window.rcOpen();return false;}" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
         </div>
         <div data-fade="13" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(22,19,22,.14);">
           <span style="font-family:'Bebas',sans-serif; font-size:48px; color:rgba(22,19,22,.22);">05</span>
@@ -208,7 +212,7 @@
             <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">Perfilado, detalles y complementos</p>
           </div>
           <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">desde $10</span>
-          <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
+          <a href="https://web.getsquire.com/brands/bri-barber-331" onclick="if(window.rcOpen){window.rcOpen();return false;}" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
         </div>
       </div>
       <p data-fade="13" style="margin-top:34px; font-size:14px; color:#453027;">Primera visita guiada con <strong style="color:#C24E14;">50% off</strong> (código <strong>firstvisit</strong>).</p>
@@ -273,7 +277,7 @@
             <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Estilo</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">92</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="92%" style="height:100%; width:92%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
             <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:auto; padding-top:16px; border-top:1px solid rgba(255,255,255,.09);">
               <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.18em; color:#8A7A6E;">Ulti: Skin fade espejo</span>
-              <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="btn-primary" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.2em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:10px 22px; white-space:nowrap;">Reservar</a>
+              <a href="https://web.getsquire.com/brands/bri-barber-331" onclick="if(window.rcOpen){window.rcOpen();return false;}" class="btn-primary" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.2em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:10px 22px; white-space:nowrap;">Reservar</a>
             </div>
           </div>
         </div>
@@ -298,7 +302,7 @@
             <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Educación</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">94</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="94%" style="height:100%; width:94%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
             <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:auto; padding-top:16px; border-top:1px solid rgba(255,255,255,.09);">
               <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.18em; color:#8A7A6E;">Ulti: Asesoría de rostro</span>
-              <a href="#" onclick="if(window.rcOpen){window.rcOpen();}return false;" class="btn-primary" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.2em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:10px 22px; white-space:nowrap;">Reservar</a>
+              <a href="https://web.getsquire.com/brands/bri-barber-331" onclick="if(window.rcOpen){window.rcOpen();return false;}" class="btn-primary" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.2em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:10px 22px; white-space:nowrap;">Reservar</a>
             </div>
           </div>
         </div>
@@ -520,7 +524,7 @@
 .rc-bot{background:#2a2724;color:var(--rc-text);align-self:flex-start;border-bottom-left-radius:4px}
 .rc-me{background:linear-gradient(100deg,#FF8A4D,#FF6D29);color:#161316;align-self:flex-end;border-bottom-right-radius:4px;font-weight:600}
 #rc-form{display:flex;gap:8px;padding:12px;border-top:1px solid #332f2b}
-#rc-in{flex:1;background:#211f1c;border:1px solid #332f2b;border-radius:999px;padding:10px 14px;color:var(--rc-text);font-size:13px;outline:none}
+#rc-in{flex:1;background:#211f1c;border:1px solid #332f2b;border-radius:999px;padding:10px 14px;color:var(--rc-text);font-size:16px;outline:none}
 #rc-send{background:var(--rc-accent);border:none;color:#161316;font-weight:700;border-radius:999px;padding:0 16px;cursor:pointer}
 #rc-book{display:block;text-align:center;font-size:11px;color:var(--rc-mut);padding:0 0 10px;text-decoration:underline}
 #rc-book a{color:var(--rc-accent)}
@@ -530,7 +534,7 @@
   var WEBHOOK_URL = "https://the303photography.app.n8n.cloud/webhook/recepcionista-structure";
   var SQUIRE = "https://web.getsquire.com/brands/bri-barber-331";
   var GREETING = "¡Hola! Soy Sofía, la recepcionista de Structure 💈 ¿Te ayudo a agendar tu cita?";
-  var sessionId = "web-" + Math.random().toString(36).slice(2);
+  var sessionId; try{sessionId=sessionStorage.getItem('rc-sid')||('web-'+Math.random().toString(36).slice(2));sessionStorage.setItem('rc-sid',sessionId);}catch(e){sessionId='web-'+Math.random().toString(36).slice(2);}
 
   var root = document.getElementById('rc-root');
   root.innerHTML =
@@ -564,13 +568,14 @@
   root.querySelector('#rc-x').onclick=function(){panel.classList.remove('open');};
 
   form.onsubmit=function(e){e.preventDefault();var t=input.value.trim();if(!t)return;
-    add(t,'me');input.value='';
+    add(t,'me');input.value='';input.disabled=true;
     var typing=document.createElement('div');typing.className='rc-m rc-bot';typing.textContent='…';msgs.appendChild(typing);msgs.scrollTop=msgs.scrollHeight;
+    function done(){input.disabled=false;input.focus();}
     fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({message:t,sessionId:sessionId,source:'web-structure'})})
       .then(function(r){return r.json();})
-      .then(function(d){typing.remove();add((d&&(d.reply||d.output||d.text))||'Perfecto, un momento…','bot');})
-      .catch(function(){typing.remove();add('Ahora mismo no puedo responder aquí. Reserva directo en el calendario 👉 '+SQUIRE,'bot');});
+      .then(function(d){typing.remove();add((d&&(d.reply||d.output||d.text))||'Perfecto, un momento…','bot');done();})
+      .catch(function(){typing.remove();var m=document.createElement('div');m.className='rc-m rc-bot';m.appendChild(document.createTextNode('Ahora mismo no puedo responder aquí. Reserva directo en el calendario: '));var a=document.createElement('a');a.href=SQUIRE;a.target='_blank';a.rel='noopener';a.style.color='#FF6D29';a.style.textDecoration='underline';a.textContent='Abrir calendario →';m.appendChild(a);msgs.appendChild(m);msgs.scrollTop=msgs.scrollHeight;done();});
   };
 })();
 </script>
