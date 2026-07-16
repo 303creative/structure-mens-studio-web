@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="./support.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -32,16 +32,15 @@
 
   <!-- NAVBAR -->
   <nav data-screen-label="Navbar" style="position:sticky; top:16px; z-index:80; display:flex; align-items:center; justify-content:space-between; gap:24px; max-width:1180px; margin:16px auto 0; padding:10px 14px 10px 18px; border:1px solid rgba(255,255,255,.1); border-radius:999px; background:rgba(22,19,22,.72); backdrop-filter:blur(14px);">
-    <a href="Structure Men's Studio.dc.html" style="display:flex; align-items:center; gap:12px;">
+    <a href="index.html" style="display:flex; align-items:center; gap:12px;">
       <img src="assets/logo.png" alt="Structure Men's Studio" style="width:42px; height:42px; object-fit:contain;">
       <span style="font-family:'Bebas',sans-serif; font-size:19px; letter-spacing:.24em; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">STRUCTURE</span>
     </a>
     <div style="display:flex; align-items:center; gap:28px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.22em;">
-      <a href="Structure Men's Studio.dc.html" style="color:#BABABA;" style-hover="color:#FF6D29;">Inicio</a>
-      <a href="Structure Men's Studio.dc.html#servicios" style="color:#BABABA;" style-hover="color:#FF6D29;">Servicios</a>
-      <a href="Structure Men's Studio.dc.html#galeria" style="color:#BABABA;" style-hover="color:#FF6D29;">Galería</a>
+      <a href="index.html" style="color:#BABABA;" style-hover="color:#FF6D29;">Inicio</a>
+      <a href="index.html#servicios" style="color:#BABABA;" style-hover="color:#FF6D29;">Servicios</a>
+      <a href="index.html#galeria" style="color:#BABABA;" style-hover="color:#FF6D29;">Galería</a>
       <span style="color:#FF6D29;">Blog</span>
-      <a href="Merch.dc.html" style="color:#BABABA;" style-hover="color:#FF6D29;">Merch</a>
     </div>
     <a href="{{ booksyUrl }}" target="_blank" rel="noopener" style="display:inline-block; padding:12px 26px; border-radius:999px; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); color:#161316; font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em;" style-hover="color:#161316; filter:brightness(1.1);">Reservar</a>
   </nav>
@@ -110,19 +109,17 @@
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{
-  &quot;booksyUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://booksy.com&quot;, &quot;tsType&quot;: &quot;string&quot; }
+  &quot;booksyUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://web.getsquire.com/brands/bri-barber-331&quot;, &quot;tsType&quot;: &quot;string&quot; }
 }">
 class Component extends DCLogic {
   renderVals() {
     return {
-      booksyUrl: this.props.booksyUrl ?? 'https://booksy.com',
+      booksyUrl: this.props.booksyUrl ?? 'https://web.getsquire.com/brands/bri-barber-331',
       posts: [
         { tag: 'Cuidado', title: 'Cómo mantener tu corte perfecto entre visitas', url: 'blog-mantener.html', excerpt: 'Los tres hábitos que alargan la vida de tu corte — y los productos que de verdad valen la pena.', date: 'Julio 2026', img: 'assets/photo-1.jpg' },
         { tag: 'Técnica', title: 'Por qué el trabajo a tijera cambia el resultado', url: 'blog-tijera.html', excerpt: 'Qué hace diferente a un all-scissors cut y por qué es la base del método Structure.', date: 'Julio 2026', img: 'assets/photo-3.jpg' },
         { tag: 'Guía local', title: 'Barbería en West Brickell: qué buscar (y qué evitar)', url: 'blog-brickell.html', excerpt: 'Una guía honesta para elegir barbería en Brickell y no vivir de correcciones.', date: 'Junio 2026', img: 'assets/photo-6.jpg' },
         { tag: 'Asesoría', title: 'La forma de tu rostro decide tu corte — así la analizamos', url: 'blog-rostro.html', excerpt: 'El paso a paso de la asesoría que hacemos antes de cada primer corte.', date: 'Junio 2026', img: 'assets/photo-5.jpg' },
-        { tag: 'Estilo', title: 'Del corte al peinado: rutina de 5 minutos para diario', excerpt: 'Menos producto, mejor aplicado. La rutina exprés que enseñamos en la silla.', date: 'Mayo 2026', img: 'assets/photo-7.jpg' },
-        { tag: 'Studio', title: 'Solo con cita: por qué trabajamos así', excerpt: 'Sin filas y sin prisa — qué gana tu corte cuando el tiempo está reservado para ti.', date: 'Mayo 2026', img: 'assets/photo-2.jpg' },
       ],
     };
   }
