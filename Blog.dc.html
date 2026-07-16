@@ -56,7 +56,7 @@
 
   <!-- FEATURED POST -->
   <section data-screen-label="Post destacado" style="max-width:1080px; margin:0 auto; padding:0 24px 70px;">
-    <a href="#" style="display:grid; grid-template-columns:1.15fr .85fr; gap:0; background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; overflow:hidden; color:#FFFFFF;" style-hover="color:#FFFFFF; border:1px solid rgba(255,109,41,.6);">
+    <a href="blog-rostro.html" style="display:grid; grid-template-columns:1.15fr .85fr; gap:0; background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; overflow:hidden; color:#FFFFFF;" style-hover="color:#FFFFFF; border:1px solid rgba(255,109,41,.6);">
       <img src="assets/photo-4.jpg" alt="" style="width:100%; height:100%; min-height:380px; object-fit:cover;">
       <div style="padding:clamp(28px,4vw,52px); display:flex; flex-direction:column; gap:18px; justify-content:center;">
         <div style="display:flex; align-items:center; gap:14px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.24em; color:#FF6D29;">
@@ -75,7 +75,7 @@
   <section data-screen-label="Artículos" style="max-width:1080px; margin:0 auto; padding:0 24px 110px;">
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px;">
       <sc-for list="{{ posts }}" as="post" hint-placeholder-count="6">
-        <a href="#" style="display:flex; flex-direction:column; background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:20px; overflow:hidden; color:#FFFFFF;" style-hover="color:#FFFFFF; border:1px solid rgba(255,109,41,.5);">
+        <a href="{{ post.url }}" style="display:flex; flex-direction:column; background:linear-gradient(160deg,#221C1A 0%,#161316 80%); border:1px solid rgba(255,255,255,.1); border-radius:20px; overflow:hidden; color:#FFFFFF;" style-hover="color:#FFFFFF; border:1px solid rgba(255,109,41,.5);">
           <img src="{{ post.img }}" alt="" loading="lazy" style="width:100%; height:210px; object-fit:cover;">
           <div style="padding:26px 26px 30px; display:flex; flex-direction:column; gap:12px; flex:1;">
             <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.24em; color:#FF6D29;">{{ post.tag }}</span>
@@ -117,10 +117,10 @@ class Component extends DCLogic {
     return {
       booksyUrl: this.props.booksyUrl ?? 'https://booksy.com',
       posts: [
-        { tag: 'Cuidado', title: 'Cómo mantener tu corte perfecto entre visitas', excerpt: 'Los tres hábitos que alargan la vida de tu corte — y los productos que de verdad valen la pena.', date: 'Julio 2026', img: 'assets/photo-1.jpg' },
-        { tag: 'Técnica', title: 'Por qué el trabajo a tijera cambia el resultado', excerpt: 'Qué hace diferente a un all-scissors cut y por qué es la base del método Structure.', date: 'Julio 2026', img: 'assets/photo-3.jpg' },
-        { tag: 'Guía local', title: 'Barbería en West Brickell: qué buscar (y qué evitar)', excerpt: 'Una guía honesta para elegir barbería en Brickell y no vivir de correcciones.', date: 'Junio 2026', img: 'assets/photo-6.jpg' },
-        { tag: 'Asesoría', title: 'La forma de tu rostro decide tu corte — así la analizamos', excerpt: 'El paso a paso de la asesoría que hacemos antes de cada primer corte.', date: 'Junio 2026', img: 'assets/photo-5.jpg' },
+        { tag: 'Cuidado', title: 'Cómo mantener tu corte perfecto entre visitas', url: 'blog-mantener.html', excerpt: 'Los tres hábitos que alargan la vida de tu corte — y los productos que de verdad valen la pena.', date: 'Julio 2026', img: 'assets/photo-1.jpg' },
+        { tag: 'Técnica', title: 'Por qué el trabajo a tijera cambia el resultado', url: 'blog-tijera.html', excerpt: 'Qué hace diferente a un all-scissors cut y por qué es la base del método Structure.', date: 'Julio 2026', img: 'assets/photo-3.jpg' },
+        { tag: 'Guía local', title: 'Barbería en West Brickell: qué buscar (y qué evitar)', url: 'blog-brickell.html', excerpt: 'Una guía honesta para elegir barbería en Brickell y no vivir de correcciones.', date: 'Junio 2026', img: 'assets/photo-6.jpg' },
+        { tag: 'Asesoría', title: 'La forma de tu rostro decide tu corte — así la analizamos', url: 'blog-rostro.html', excerpt: 'El paso a paso de la asesoría que hacemos antes de cada primer corte.', date: 'Junio 2026', img: 'assets/photo-5.jpg' },
         { tag: 'Estilo', title: 'Del corte al peinado: rutina de 5 minutos para diario', excerpt: 'Menos producto, mejor aplicado. La rutina exprés que enseñamos en la silla.', date: 'Mayo 2026', img: 'assets/photo-7.jpg' },
         { tag: 'Studio', title: 'Solo con cita: por qué trabajamos así', excerpt: 'Sin filas y sin prisa — qué gana tu corte cuando el tiempo está reservado para ti.', date: 'Mayo 2026', img: 'assets/photo-2.jpg' },
       ],

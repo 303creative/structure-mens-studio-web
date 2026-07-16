@@ -40,6 +40,12 @@ img{max-width:100%;height:auto;}
   nav img{width:32px !important; height:auto !important;}
 }
 </style>
+<style id="the303-space">
+section,header,footer{contain:layout paint;}
+img{max-width:100%;height:auto;display:block;}
+*{min-width:0;}
+html{scroll-behavior:smooth;}
+</style>
 </helmet>
 
 <div style="background:#161316; color:#FFFFFF; overflow-x:clip; position:relative; min-height:100vh;">
@@ -580,6 +586,7 @@ class Component extends DCLogic {
   function add(t,who){var d=document.createElement('div');d.className='rc-m '+(who==='me'?'rc-me':'rc-bot');d.textContent=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
 
   // salta y saluda al hacer scroll (una vez)
+  /*AUTOJUMP*/setTimeout(function(){if(!greeted&&!opened){greeted=true;btn.classList.add('jump');hi.textContent=GREETING;hi.classList.add('show');setTimeout(function(){hi.classList.remove('show');btn.classList.remove('jump');},8000);}},1500);
   window.addEventListener('scroll',function(){
     if(greeted||opened) return;
     if(window.scrollY>500){greeted=true;btn.classList.add('jump');hi.textContent=GREETING;hi.classList.add('show');
