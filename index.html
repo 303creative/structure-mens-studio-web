@@ -205,17 +205,7 @@
           <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">$75</span>
           <a href="https://web.getsquire.com/brands/bri-barber-331" onclick="if(window.rcOpen){window.rcOpen();return false;}" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
         </div>
-        <div data-fade="13" style="display:grid; grid-template-columns:110px 1fr auto auto; align-items:center; gap:24px; padding:30px 0; border-top:1px solid rgba(22,19,22,.14);">
-          <span style="font-family:'Bebas',sans-serif; font-size:48px; color:rgba(22,19,22,.22);">05</span>
-          <div>
-            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:23px;">Line up &amp; extras</h3>
-            <p style="color:#453027; font-size:14px; margin-top:6px; line-height:1.5; font-family:'Manrope',sans-serif;">Perfilado, detalles y complementos</p>
-          </div>
-          <span style="font-family:'Bebas',sans-serif; font-size:26px; color:#C24E14; white-space:nowrap;">desde $10</span>
-          <a href="https://web.getsquire.com/brands/bri-barber-331" onclick="if(window.rcOpen){window.rcOpen();return false;}" class="lnk" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.22em; color:#161316; white-space:nowrap;">Reservar →</a>
-        </div>
       </div>
-      <p data-fade="13" style="margin-top:34px; font-size:14px; color:#453027;">Primera visita guiada con <strong style="color:#C24E14;">50% off</strong> (código <strong>firstvisit</strong>).</p>
     </div>
   </section>
 
@@ -315,7 +305,7 @@
     <div style="max-width:1080px; margin:0 auto;">
       <h2 data-fade="19" style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(36px,4.4vw,60px); margin-bottom:60px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">El trabajo</h2>
       <div style="position:sticky; top:96px; margin-bottom:60px;">
-        <div style="background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; padding:28px;">
+        <div data-sticky-card style="background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; padding:28px; transform-origin:center top; will-change:transform;">
           <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px;">
             <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; color:#FFFFFF;">Precisión a tijera</h3>
             <span style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em; color:#BABABA;">All-scissors</span>
@@ -330,7 +320,7 @@
         </div>
       </div>
       <div style="position:sticky; top:124px; margin-bottom:60px;">
-        <div style="background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; padding:28px;">
+        <div data-sticky-card style="background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; padding:28px; transform-origin:center top; will-change:transform;">
           <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px;">
             <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; color:#FFFFFF;">Definición y línea</h3>
             <span style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em; color:#BABABA;">Detalle</span>
@@ -345,7 +335,7 @@
         </div>
       </div>
       <div style="position:sticky; top:152px; margin-bottom:60px;">
-        <div style="background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; padding:28px;">
+        <div data-sticky-card style="background:linear-gradient(160deg,#221C1A 0%,#161316 70%); border:1px solid rgba(255,109,41,.28); border-radius:24px; padding:28px; transform-origin:center top; will-change:transform;">
           <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px;">
             <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:22px; color:#FFFFFF;">El resultado</h3>
             <span style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em; color:#BABABA;">Estilo</span>
@@ -498,6 +488,25 @@
         logo.style.transform='translate3d(0,0,0)';
       }
     },{passive:true});
+  }
+
+  // Efecto de tarjetas apiladas: se encogen un poco al hacer scroll
+  var scards = document.querySelectorAll('[data-sticky-card]');
+  if(scards.length){
+    var stickyTick = function(){
+      var total = scards.length;
+      scards.forEach(function(card,i){
+        var wrap = card.parentElement;
+        var rect = wrap.getBoundingClientRect();
+        var stuckAt = 96 + i*28;
+        var progress = Math.min(Math.max((stuckAt+40-rect.top)/400,0),1);
+        var targetScale = 1-(total-1-i)*0.03;
+        var scale = 1-(1-targetScale)*progress;
+        card.style.transform = 'scale('+scale+')';
+      });
+    };
+    window.addEventListener('scroll', function(){ requestAnimationFrame(stickyTick); }, {passive:true});
+    stickyTick();
   }
 })();
 </script>
