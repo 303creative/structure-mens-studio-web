@@ -66,7 +66,6 @@
   /* Reveal on scroll (progressive enhancement: solo se oculta si hay JS) */
   .js [data-fade] { opacity: 0; transform: translateY(30px); transition: opacity .7s cubic-bezier(.25,.1,.25,1), transform .7s cubic-bezier(.25,.1,.25,1); }
   .js [data-fade].in { opacity: 1; transform: none; }
-  .js [data-statbar] { transition: width .9s cubic-bezier(.25,.1,.25,1); }
   @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } .js [data-fade] { opacity: 1; transform: none; transition: none; } }
   /* Hover polish (reemplaza style-hover de Claude Design) */
   .btn-primary:hover { filter: brightness(1.1); }
@@ -244,56 +243,32 @@
     <div style="max-width:1120px; margin:0 auto;">
       <p data-fade="30" style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.3em; color:#FF6D29;">El equipo</p>
       <h2 data-fade="31" style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:clamp(36px,4.4vw,60px); margin:12px 0 14px; background:linear-gradient(180deg,#BABABA 0%,#FFFFFF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Elige a tu barbero</h2>
-      <p data-fade="32" style="color:#BABABA; font-size:15px; font-weight:300; margin-bottom:50px; max-width:480px; line-height:1.6;">Cada uno con su especialidad. Revisa sus stats y reserva con quien va contigo.</p>
+      <p data-fade="32" style="color:#BABABA; font-size:15px; font-weight:300; margin-bottom:50px; max-width:480px; line-height:1.6;">Dos manos, dos especialidades, la misma precisión. Elige con quién va tu estilo.</p>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:24px; align-items:stretch;">
         <!-- Alex -->
-        <div data-fade="33" style="display:flex; flex-direction:column; background:linear-gradient(160deg,#221C1A 0%,#161316 75%); border:1px solid rgba(255,255,255,.14); border-radius:24px; overflow:hidden;">
-          <div style="position:relative; height:320px; background:#1D1815;">
+        <div data-fade="33" style="display:flex; flex-direction:column; background:#1A1618; border:1px solid rgba(255,255,255,.10); border-radius:24px; overflow:hidden;">
+          <div style="height:380px; background:#1D1815;">
             <img src="assets/barber-alex.jpg" alt="Alex, barbero especialista en fades en Structure" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:center 20%;">
-            <span style="position:absolute; top:16px; left:16px; font-family:'Bebas',sans-serif; font-size:15px; letter-spacing:.16em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:7px 16px;">LVL 8</span>
-            <span style="position:absolute; top:16px; right:16px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#FFFFFF; background:rgba(22,19,22,.7); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:7px 14px;">Clase: Fade Master</span>
-            <div style="position:absolute; inset:auto 0 0 0; height:120px; background:linear-gradient(180deg, transparent, rgba(22,19,22,.95)); display:flex; align-items:flex-end; padding:18px;">
-              <div>
-                <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:28px; color:#FFFFFF;">Alex</h3>
-                <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.24em; color:#BABABA; margin-top:4px;">Barbero · Fade specialist</p>
-              </div>
-            </div>
           </div>
           <div style="padding:24px 24px 20px; display:flex; flex-direction:column; gap:14px; flex:1;">
-            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Fades</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">95</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="95%" style="height:100%; width:95%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
-            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Tijera</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">90</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="90%" style="height:100%; width:90%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
-            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Line up</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">94</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="94%" style="height:100%; width:94%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
-            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Rapidez</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">88</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="88%" style="height:100%; width:88%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
-            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Estilo</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">92</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="92%" style="height:100%; width:92%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
-            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:auto; padding-top:16px; border-top:1px solid rgba(255,255,255,.09);">
-              <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.18em; color:#8A7A6E;">Ulti: Skin fade espejo</span>
-              <a href="https://web.getsquire.com/brands/bri-barber-331" target="_blank" rel="noopener" class="btn-primary" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.2em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:10px 22px; white-space:nowrap;">Reservar</a>
-            </div>
+            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:30px; color:#FFFFFF; line-height:1;">Alex</h3>
+            <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.26em; color:#8A7A6E; margin-top:10px;">Barbero · Fades y degradados</p>
+            <div style="height:1px; background:rgba(255,255,255,.10); margin:20px 0;"></div>
+            <p style="color:#BABABA; font-size:15px; line-height:1.65; font-weight:300;">Especialista en skin fades y degradados limpios. Precisión en la línea y acabados nítidos.</p>
+            <a href="https://web.getsquire.com/brands/bri-barber-331" target="_blank" rel="noopener" class="lnk" style="display:inline-block; margin-top:22px; font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em; color:#FF6D29;">Reservar con Alex →</a>
           </div>
         </div>
         <!-- Bri -->
-        <div data-fade="34" style="display:flex; flex-direction:column; background:linear-gradient(160deg,#221C1A 0%,#161316 75%); border:1px solid rgba(255,109,41,.45); border-radius:24px; overflow:hidden;">
-          <div style="position:relative; height:320px; background:#1D1815;">
+        <div data-fade="34" style="display:flex; flex-direction:column; background:#1A1618; border:1px solid rgba(255,255,255,.10); border-radius:24px; overflow:hidden;">
+          <div style="height:380px; background:#1D1815;">
             <img src="assets/barber-bri.jpg" alt="Bri, fundadora y master barber de Structure Men's Studio" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:center 20%;">
-            <span style="position:absolute; top:16px; left:16px; font-family:'Bebas',sans-serif; font-size:15px; letter-spacing:.16em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:7px 16px;">LVL 10</span>
-            <span style="position:absolute; top:16px; right:16px; font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#FFFFFF; background:rgba(22,19,22,.7); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:7px 14px;">Clase: Precision Master</span>
-            <div style="position:absolute; inset:auto 0 0 0; height:120px; background:linear-gradient(180deg, transparent, rgba(22,19,22,.95)); display:flex; align-items:flex-end; padding:18px;">
-              <div>
-                <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:28px; color:#FFFFFF;">Bri</h3>
-                <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.24em; color:#BABABA; margin-top:4px;">Founder · Master barber</p>
-              </div>
-            </div>
           </div>
           <div style="padding:24px 24px 20px; display:flex; flex-direction:column; gap:14px; flex:1;">
-            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Tijera</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">98</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="98%" style="height:100%; width:98%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
-            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Asesoría</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">96</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="96%" style="height:100%; width:96%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
-            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Detalle</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">95</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="95%" style="height:100%; width:95%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
-            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Fades</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">92</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="92%" style="height:100%; width:92%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
-            <div style="display:flex; flex-direction:column; gap:6px;"><div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.2em; color:#BABABA;">Educación</span><span style="font-family:'Bebas',sans-serif; font-size:16px; color:#FF6D29;">94</span></div><div style="height:7px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden;"><div data-statbar data-w="94%" style="height:100%; width:94%; border-radius:999px; background:linear-gradient(90deg,#C24E14,#FF6D29 60%,#FF8A4D);"></div></div></div>
-            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:auto; padding-top:16px; border-top:1px solid rgba(255,255,255,.09);">
-              <span style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.18em; color:#8A7A6E;">Ulti: Asesoría de rostro</span>
-              <a href="https://web.getsquire.com/brands/bri-barber-331" target="_blank" rel="noopener" class="btn-primary" style="font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.2em; color:#161316; background:linear-gradient(100deg,#FF8A4D,#FF6D29 50%,#C24E14); border-radius:999px; padding:10px 22px; white-space:nowrap;">Reservar</a>
-            </div>
+            <h3 style="font-family:'Otflag','Manrope',sans-serif; font-weight:500; font-size:30px; color:#FFFFFF; line-height:1;">Bri</h3>
+            <p style="font-family:Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.26em; color:#8A7A6E; margin-top:10px;">Fundadora · Master barber</p>
+            <div style="height:1px; background:rgba(255,255,255,.10); margin:20px 0;"></div>
+            <p style="color:#BABABA; font-size:15px; line-height:1.65; font-weight:300;">Trabajo a tijera y asesoría de imagen. Define contigo el estilo que te queda antes de cortar.</p>
+            <a href="https://web.getsquire.com/brands/bri-barber-331" target="_blank" rel="noopener" class="lnk" style="display:inline-block; margin-top:22px; font-family:'Bebas',sans-serif; font-size:14px; letter-spacing:.24em; color:#FF6D29;">Reservar con Bri →</a>
           </div>
         </div>
       </div>
@@ -467,15 +442,6 @@
     });
   },{threshold:0.08, rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('[data-fade]').forEach(function(el){io.observe(el);});
-
-  var bars=document.querySelectorAll('[data-statbar]');
-  bars.forEach(function(el){el.style.width='0';});
-  var io2=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){var el=e.target;el.style.width=el.getAttribute('data-w');io2.unobserve(el);}
-    });
-  },{threshold:0.2});
-  bars.forEach(function(el){io2.observe(el);});
 
   var logo=document.getElementById('hero-logo');
   if(logo && window.matchMedia('(pointer:fine)').matches){
